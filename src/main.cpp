@@ -27,7 +27,10 @@ int main() {
 	//system.potentials[0]->print();							//print (type1-type1) interaction potential; check "print" in "Potentials.cpp" for more details
 
 	Reader_Data loader(setup.get_input());
-	loader.load(system);										//load initial atomic configuration
+	if (loader.load(system) != EXIT_SUCCESS) {					//load initial atomic configuration
+		std::cout << "Cannot load " << setup.get_input() << std::endl;
+		return EXIT_FAILURE;
+	}
 
 	auto handler_E = std::make_shared<Handler_Energy>();		//create an energy handler, which computes Etot, Ep, and Ek
 	auto handler_T = std::make_shared<Handler_Temperature>();	//create a temperature handler, which computes T

@@ -38,7 +38,7 @@ int main() {
 	system.dt = dt;
 	system.boundaries = { Boundary::periodic, Boundary::periodic, Boundary::periodic };
 
-	auto integrator = std::make_shared<Integrator_Gear5>();		//create a smart pointer to Gear5 integrator
+	auto integrator = std::make_shared<Integrator_Nord5>();		//create a smart pointer to Nord5 integrator
 	simulation.set_integrator(integrator);						//set integrator used in the simulation
 
 	auto nb_list = std::make_shared<NB_list>();					//create a smart pointer to NB_list object used for nearest neighbour search
@@ -57,7 +57,10 @@ int main() {
 	//system.potentials[0]->print();								//print (type1-type1) interaction potential; check "print" in "Potentials.cpp" for more details
 
 	Reader_Data loader(input_file);
-	loader.load(system);										//load initial atomic configuration										
+	if (loader.load(system) != EXIT_SUCCESS) {					//load initial atomic configuration
+		std::cout << "Cannot load " << input_file << std::endl;
+		return EXIT_FAILURE;
+	}																				
 
 	auto handler_E = std::make_shared<Handler_Energy>();		//create an energy handler, which computes Etot, Ep, and Ek
 	auto handler_T = std::make_shared<Handler_Temperature>();	//create a temperature handler, which computes T
