@@ -22,7 +22,7 @@ default:
 	@echo "C++ version"
 	$(MAKE) $(EXE_MD)
 	$(MAKE) $(EXE_CG)
-#	$(MAKE) $(EXE_dMD)
+	$(MAKE) $(EXE_dMD)
 #	$(MAKE) $(EXE_Conv)
 
 $(EXE_MD): $(OBJS_MD)
