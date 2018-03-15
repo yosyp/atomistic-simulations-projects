@@ -95,8 +95,8 @@ class Handler_Pressure : public Handler_Base {  // this class implements Handler
 /*! This class implements Berendsen thermostat algoritm. At each time step velocities are scaled by a scaling factor
    calculated based on the current and target temperatures. Check "Berendsen, J.Chem.Phys., 81 (1984), p. 3684" for more
    details. Although this method does not reproduce canonical ensemble, the average value of temperature is correct, and
-   Berendsen thermostat is widely used. To reproduce correct temperature fluctuations, Nosé–Hoover or Nosé–Hoover Chain
-   thermostat must be used. */
+   Berendsen thermostat is widely used. To reproduce correct temperature fluctuations, Nosé–Hoover or Nosé–Hoover
+   Chain thermostat must be used. */
 class Handler_BerendsenT : public Handler_Temperature {  // this class expands Handler_Temperature
  public:
   Handler_BerendsenT(double T, double tau = 2.0);  //!< Initialize Handler_BerendsenT object. T is the target
@@ -118,16 +118,15 @@ class Handler_BerendsenT : public Handler_Temperature {  // this class expands H
 class Handler_BerendsenP : public Handler_Pressure {  // this class expands Handler_Pressure
  public:
   /*! This is an enum class describing methods of pressure control */
-  enum class
-      Mode {
-        XYZ,             /*!< X, Y, and Z sizes are scaled together */
-        XY_Zindependent, /*!< X and Y sizes are controlled together based on 0.5*(Pxx + Pyy), and Z size is controlled
-                            based on Pzz */
-        XYZindependent,  /*!< X, Y, and Z sizes are scaled independently based on Pxx, Pyy, and Pzz */
-        Z                /*!< Control only Z size based on Pzz */
-      };
+  enum class Mode {
+    XYZ,             /*!< X, Y, and Z sizes are scaled together */
+    XY_Zindependent, /*!< X and Y sizes are controlled together based on 0.5*(Pxx + Pyy), and Z size is controlled
+                        based on Pzz */
+    XYZindependent,  /*!< X, Y, and Z sizes are scaled independently based on Pxx, Pyy, and Pzz */
+    Z                /*!< Control only Z size based on Pzz */
+  };
 
-  Handler_BerendsenP(double P, Mode mode = Mode::XYZ, double beta = 5e-12); /**<  Initialize Handler_BerendsenP object.
+  Handler_BerendsenP(double P, Mode mode = Mode::XYZ, double beta = 1e-10); /**<  Initialize Handler_BerendsenP object.
                                                                              * P [Pa] is the target temperature, mode is
                                                                              * the method of pressure control, and beta
                                                                              * = Kt*dt/(3*tp) [Pa^-1] (Kt - isothermal
