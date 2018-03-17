@@ -1,0 +1,175 @@
+Loading a list of files from md.rc
+Loading a simulation setup from md.input
+Berendsen thermostat: T = 100.000000 K, tau = 2.000000 ps
+Berendsen barostat: P = 0.000100 GPa; pressure control XYZ together; beta = 0.100000 GPa^-1
+Building LJ Ar-Ar potential
+sigma = 3.405, epsilon = 0.0103
+Reading equilT100.data
+Starting the simulation
+Number steps: 100000
+Saving every: 5000 steps.
+time = 1.002, Etot = -24.5815, T = 105.327
+Writing nptT100.data
+Saving snapshot to time1001
+Writing data/time1001.d
+time = 2.002, Etot = -24.5936, T = 99.0171
+time = 3.002, Etot = -24.5439, T = 101.127
+time = 4.002, Etot = -24.4963, T = 96.4044
+time = 5.002, Etot = -24.4011, T = 97.7664
+time = 6.002, Etot = -24.2926, T = 98.4342
+Writing nptT100.data
+Saving snapshot to time6002
+Writing data/time6002.d
+time = 7.002, Etot = -24.1725, T = 95.9232
+time = 8.002, Etot = -24.0351, T = 96.964
+time = 9.002, Etot = -23.9135, T = 99.4592
+time = 10.002, Etot = -23.7787, T = 92.2521
+time = 11.002, Etot = -23.6378, T = 93.4441
+Writing nptT100.data
+Saving snapshot to time11001
+Writing data/time11001.d
+time = 12.002, Etot = -23.465, T = 98.2939
+time = 13.002, Etot = -23.2693, T = 97.4342
+time = 14.002, Etot = -22.9771, T = 88.5444
+time = 15.002, Etot = -22.7144, T = 91.5762
+time = 16.002, Etot = -22.3965, T = 87.5234
+Writing nptT100.data
+Saving snapshot to time16001
+Writing data/time16001.d
+time = 17.002, Etot = -22.0678, T = 92.3635
+time = 18.002, Etot = -21.7625, T = 90.1118
+time = 19.002, Etot = -21.4824, T = 91.8249
+time = 20.002, Etot = -21.212, T = 90.9597
+time = 21.002, Etot = -21.0207, T = 91.5496
+Writing nptT100.data
+Saving snapshot to time21002
+Writing data/time21002.d
+time = 22.002, Etot = -20.8016, T = 92.9676
+time = 23.002, Etot = -20.618, T = 90.8492
+time = 24.002, Etot = -20.4523, T = 97.4852
+time = 25.002, Etot = -20.2796, T = 94.7468
+time = 26.002, Etot = -20.1054, T = 96.836
+Writing nptT100.data
+Saving snapshot to time26002
+Writing data/time26002.d
+time = 27.002, Etot = -19.9778, T = 95.4914
+time = 28.002, Etot = -19.8671, T = 96.3167
+time = 29.002, Etot = -19.742, T = 96.7252
+time = 30.002, Etot = -19.6159, T = 93.7473
+time = 31.002, Etot = -19.5664, T = 99.6926
+Writing nptT100.data
+Saving snapshot to time31002
+Writing data/time31002.d
+time = 32.002, Etot = -19.4548, T = 97.0237
+time = 33.002, Etot = -19.3614, T = 94.8505
+time = 34.002, Etot = -19.2308, T = 96.7137
+time = 35.002, Etot = -19.1375, T = 101.427
+time = 36.002, Etot = -19.0473, T = 97.922
+Writing nptT100.data
+Saving snapshot to time36002
+Writing data/time36002.d
+time = 37.002, Etot = -18.9749, T = 92.5394
+time = 38.002, Etot = -18.9143, T = 102.448
+time = 39.002, Etot = -18.8779, T = 99.5366
+time = 40.002, Etot = -18.8246, T = 100.097
+time = 41.002, Etot = -18.7467, T = 98.4923
+Writing nptT100.data
+Saving snapshot to time41001
+Writing data/time41001.d
+time = 42.002, Etot = -18.7167, T = 97.0179
+time = 43.002, Etot = -18.6866, T = 100.746
+time = 44.002, Etot = -18.6575, T = 100.125
+time = 45.002, Etot = -18.6083, T = 99.2711
+time = 46.002, Etot = -18.4769, T = 97.7705
+Writing nptT100.data
+Saving snapshot to time46001
+Writing data/time46001.d
+time = 47.002, Etot = -18.421, T = 98.7841
+time = 48.002, Etot = -18.3796, T = 100.221
+time = 49.002, Etot = -18.3233, T = 99.6123
+time = 50.002, Etot = -18.3572, T = 100.733
+time = 51.002, Etot = -18.32, T = 102.348
+Writing nptT100.data
+Saving snapshot to time51001
+Writing data/time51001.d
+time = 52.002, Etot = -18.2842, T = 96.9558
+time = 53.002, Etot = -18.2607, T = 96.1521
+time = 54.002, Etot = -18.2092, T = 97.7567
+time = 55.002, Etot = -18.1843, T = 98.2667
+time = 56.002, Etot = -18.1452, T = 98.7883
+Writing nptT100.data
+Saving snapshot to time56001
+Writing data/time56001.d
+time = 57.002, Etot = -18.1399, T = 100.768
+time = 58.002, Etot = -18.0903, T = 104.131
+time = 59.002, Etot = -18.0686, T = 95.3702
+time = 60.002, Etot = -18.043, T = 99.4822
+time = 61.002, Etot = -18.0297, T = 98.9921
+Writing nptT100.data
+Saving snapshot to time61001
+Writing data/time61001.d
+time = 62.002, Etot = -18.0212, T = 95.3662
+time = 63.002, Etot = -17.9743, T = 98.821
+time = 64.002, Etot = -17.9653, T = 99.8986
+time = 65.002, Etot = -17.9641, T = 101.425
+time = 66.002, Etot = -17.94, T = 100.863
+Writing nptT100.data
+Saving snapshot to time66001
+Writing data/time66001.d
+time = 67.002, Etot = -17.9333, T = 97.2581
+time = 68.002, Etot = -17.9209, T = 98.1041
+time = 69.002, Etot = -17.9249, T = 99.8662
+time = 70.002, Etot = -17.927, T = 99.3202
+time = 71.002, Etot = -17.925, T = 101.892
+Writing nptT100.data
+Saving snapshot to time71001
+Writing data/time71001.d
+time = 72.002, Etot = -17.9049, T = 98.5084
+time = 73.002, Etot = -17.869, T = 99.9067
+time = 74.002, Etot = -17.7993, T = 102.335
+time = 75.002, Etot = -17.812, T = 100.606
+time = 76.002, Etot = -17.7568, T = 97.0947
+Writing nptT100.data
+Saving snapshot to time76001
+Writing data/time76001.d
+time = 77.002, Etot = -17.7563, T = 102.752
+time = 78.002, Etot = -17.7542, T = 97.2048
+time = 79.002, Etot = -17.7598, T = 101.182
+time = 80.002, Etot = -17.7425, T = 96.6663
+time = 81.002, Etot = -17.7183, T = 101.249
+Writing nptT100.data
+Saving snapshot to time81002
+Writing data/time81002.d
+time = 82.002, Etot = -17.6924, T = 97.2551
+time = 83.002, Etot = -17.68, T = 102.158
+time = 84.002, Etot = -17.6229, T = 97.051
+time = 85.002, Etot = -17.6466, T = 99.7741
+time = 86.002, Etot = -17.6859, T = 101.517
+Writing nptT100.data
+Saving snapshot to time86002
+Writing data/time86002.d
+time = 87.002, Etot = -17.6543, T = 100.397
+time = 88.002, Etot = -17.6689, T = 98.3051
+time = 89.002, Etot = -17.7164, T = 99.6415
+time = 90.002, Etot = -17.6787, T = 103.921
+time = 91.002, Etot = -17.6888, T = 98.7749
+Writing nptT100.data
+Saving snapshot to time91002
+Writing data/time91002.d
+time = 92.002, Etot = -17.6955, T = 102.729
+time = 93.002, Etot = -17.6689, T = 102.386
+time = 94.002, Etot = -17.6454, T = 99.7689
+time = 95.002, Etot = -17.6822, T = 98.2945
+time = 96.002, Etot = -17.6615, T = 99.3761
+Writing nptT100.data
+Saving snapshot to time96002
+Writing data/time96002.d
+time = 97.002, Etot = -17.6611, T = 99.4483
+time = 98.002, Etot = -17.6245, T = 101.703
+time = 99.002, Etot = -17.592, T = 97.951
+time = 100.002, Etot = -17.5524, T = 97.8342
+time = 101.002, Etot = -17.5003, T = 98.505
+Writing nptT100.data
+Saving snapshot to time
+Writing data/time.d
+Runtime: 70.9097 s
