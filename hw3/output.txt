@@ -1,0 +1,133 @@
+Loading a list of files from md.rc
+Loading a simulation setup from md.input
+Building LJ Ar-Ar potential
+sigma = 3.405, epsilon = 0.0103
+Reading Ar.data
+Starting the simulation
+Number steps: 5000
+
+Assigning the initial velocity corresponding to T = 300.000000 K
+time = 0.004, Etot = -1.19491, T = 600
+Writing Art.data
+Writing data/time000.d
+time = 0.204, Etot = -1.62808, T = 305.015
+time = 0.404, Etot = -1.60915, T = 309.558
+time = 0.604, Etot = -1.6157, T = 311.834
+time = 0.804, Etot = -1.61586, T = 305.306
+time = 1.004, Etot = -1.60277, T = 295.715
+time = 1.204, Etot = -1.59581, T = 291.38
+time = 1.404, Etot = -1.60459, T = 297.309
+time = 1.604, Etot = -1.59763, T = 298.967
+time = 1.804, Etot = -1.59184, T = 287.914
+time = 2.004, Etot = -1.59898, T = 296.374
+Writing Art.data
+Writing data/time002.d
+time = 2.204, Etot = -1.60034, T = 302.477
+time = 2.404, Etot = -1.59239, T = 293.725
+time = 2.604, Etot = -1.6009, T = 293.071
+time = 2.804, Etot = -1.59595, T = 291.325
+time = 3.004, Etot = -1.59568, T = 299.894
+time = 3.204, Etot = -1.58808, T = 298.791
+time = 3.404, Etot = -1.60688, T = 304.426
+time = 3.604, Etot = -1.60043, T = 283.468
+time = 3.804, Etot = -1.6073, T = 296.872
+time = 4.004, Etot = -1.60885, T = 297.677
+Writing Art.data
+Writing data/time004.d
+time = 4.204, Etot = -1.59744, T = 299.461
+time = 4.404, Etot = -1.6057, T = 277.908
+time = 4.604, Etot = -1.59869, T = 295.07
+time = 4.804, Etot = -1.60062, T = 284.036
+time = 5.004, Etot = -1.59733, T = 286.871
+time = 5.204, Etot = -1.59836, T = 296.318
+time = 5.404, Etot = -1.59579, T = 293.04
+time = 5.604, Etot = -1.58912, T = 287.343
+time = 5.804, Etot = -1.60219, T = 293.806
+time = 6.004, Etot = -1.59969, T = 280.331
+Writing Art.data
+Writing data/time006.d
+time = 6.204, Etot = -1.58744, T = 296.598
+time = 6.404, Etot = -1.60315, T = 284.855
+time = 6.604, Etot = -1.59885, T = 289.808
+time = 6.804, Etot = -1.6045, T = 298.5
+time = 7.004, Etot = -1.5974, T = 290.937
+time = 7.204, Etot = -1.5944, T = 278.784
+time = 7.404, Etot = -1.59939, T = 302.44
+time = 7.604, Etot = -1.60396, T = 294.941
+time = 7.804, Etot = -1.6062, T = 301.301
+time = 8.004, Etot = -1.60036, T = 305.598
+Writing Art.data
+Writing data/time008.d
+time = 8.204, Etot = -1.60703, T = 309.504
+time = 8.404, Etot = -1.60041, T = 296.858
+time = 8.604, Etot = -1.5978, T = 291.574
+time = 8.804, Etot = -1.61465, T = 285.792
+time = 9.004, Etot = -1.59474, T = 297.707
+time = 9.204, Etot = -1.59589, T = 296.097
+time = 9.404, Etot = -1.61108, T = 292.533
+time = 9.604, Etot = -1.59945, T = 289.228
+time = 9.804, Etot = -1.60504, T = 289.861
+time = 10.004, Etot = -1.60491, T = 280.253
+Writing Art.data
+Writing data/time010.d
+time = 10.204, Etot = -1.60449, T = 297.256
+time = 10.404, Etot = -1.59341, T = 296.09
+time = 10.604, Etot = -1.60439, T = 290.731
+time = 10.804, Etot = -1.60383, T = 292.1
+time = 11.004, Etot = -1.61079, T = 284.386
+time = 11.204, Etot = -1.60804, T = 307.801
+time = 11.404, Etot = -1.60047, T = 290.29
+time = 11.604, Etot = -1.60535, T = 299.214
+time = 11.804, Etot = -1.60286, T = 311.47
+time = 12.004, Etot = -1.60203, T = 301.015
+Writing Art.data
+Writing data/time012.d
+time = 12.204, Etot = -1.60061, T = 292.794
+time = 12.404, Etot = -1.61618, T = 292.563
+time = 12.604, Etot = -1.59266, T = 295.623
+time = 12.804, Etot = -1.60526, T = 286.911
+time = 13.004, Etot = -1.60689, T = 288.561
+time = 13.204, Etot = -1.60165, T = 290.406
+time = 13.404, Etot = -1.60869, T = 292.95
+time = 13.604, Etot = -1.61462, T = 292.049
+time = 13.804, Etot = -1.60821, T = 306.477
+time = 14.004, Etot = -1.60238, T = 284.277
+Writing Art.data
+Writing data/time014.d
+time = 14.204, Etot = -1.60447, T = 287.193
+time = 14.404, Etot = -1.60589, T = 300.624
+time = 14.604, Etot = -1.59626, T = 305.454
+time = 14.804, Etot = -1.61588, T = 297.641
+time = 15.004, Etot = -1.59723, T = 291.621
+time = 15.204, Etot = -1.60741, T = 294.601
+time = 15.404, Etot = -1.60575, T = 283.025
+time = 15.604, Etot = -1.60173, T = 286.07
+time = 15.804, Etot = -1.6005, T = 294.512
+time = 16.004, Etot = -1.60548, T = 292.436
+Writing Art.data
+Writing data/time016.d
+time = 16.204, Etot = -1.60544, T = 286.732
+time = 16.404, Etot = -1.6029, T = 291.304
+time = 16.604, Etot = -1.6061, T = 300.953
+time = 16.804, Etot = -1.60461, T = 301.949
+time = 17.004, Etot = -1.6024, T = 297.059
+time = 17.204, Etot = -1.60691, T = 289.462
+time = 17.404, Etot = -1.60364, T = 293.916
+time = 17.604, Etot = -1.60582, T = 290.331
+time = 17.804, Etot = -1.60772, T = 286.706
+time = 18.004, Etot = -1.59754, T = 290.468
+Writing Art.data
+Writing data/time018.d
+time = 18.204, Etot = -1.60442, T = 299.716
+time = 18.404, Etot = -1.60936, T = 301.566
+time = 18.604, Etot = -1.60497, T = 293.111
+time = 18.804, Etot = -1.60099, T = 299.24
+time = 19.004, Etot = -1.60008, T = 284.88
+time = 19.204, Etot = -1.6058, T = 291.237
+time = 19.404, Etot = -1.61049, T = 282.015
+time = 19.604, Etot = -1.60838, T = 300.381
+time = 19.804, Etot = -1.60732, T = 279.479
+time = 20.004, Etot = -1.60738, T = 287.31
+Writing Art.data
+Writing data/time020.d
+Runtime: 5.27027 s
