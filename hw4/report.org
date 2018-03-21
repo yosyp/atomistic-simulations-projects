@@ -13,11 +13,36 @@
 #+AUTHOR: MSE 6270: Introduction to Atomistic Simulations @@latex:\\@@ Homework #4 @@latex:\\\\@@Yosyp Schwab
 #+EMAIL: ys4ea@virginia.edu
 
-* Heading
-
+* Question 1
+Using the provided experimental value of molar volume of solid Ar at
+the melting temperature and 1 atm pressure of $V_m = 24.6 \frac{cm^3}{mole}$,
+we can directly compute the lattice parameter $a$ as follows:
 \begin{equation}
-r = \sigma \sqrt[\leftroot{-3}\uproot{3}6]{2} = 3.82198 A
+a = \sqrt[3]{4 \frac{V_m}{Av}} = 5.467 A
 \end{equation}
+where $Av = 6.022\times 10^{23}$ is Avogardo's constant, and an
+implicit unit conversion is performed in the above equation from $cm$
+to $A$. 
+
+* Question 2
+
+| Specified Input Temperature [K] | Real Temperature [K] |
+|---------------------------------+----------------------|
+|                              60 |                 68.1 |
+|                              74 |                 81.8 |
+|                              75 |                 82.7 |
+|                              76 |                 83.6 |
+|                              77 |                 84.5 |
+|                              78 |                 85.4 |
+|                              79 |                 86.3 |
+|                              80 |                 87.2 |
+
+* Question 3
+
+* Question 4
+
+* Question 5
+
 
 #+CAPTION: Plot of potential energy and its negative gradient (force) versus interatomic distance. The equilibrium interatomic distance is labeled.
 #+NAME: fig:q4a
