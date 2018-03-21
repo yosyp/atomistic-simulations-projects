@@ -172,4 +172,4 @@ time = 101.001, Etot = -27.581, T = 87.7295
 Writing nptT85.data
 Saving snapshot to time
 Writing data/time.d
-Runtime: 80.6707 s
+Runtime: 83.3049 s

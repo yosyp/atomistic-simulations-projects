@@ -9,4 +9,4 @@
 # Run program
 module load intel
 cd $SLURM_SUBMIT_DIR
-./run_npt
+./run_equil
