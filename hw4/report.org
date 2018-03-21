@@ -1,0 +1,29 @@
+#+LaTeX_HEADER: \usepackage[parameters]{listings}
+#+LaTeX_HEADER: \usepackage{listings}
+#+LaTeX_HEADER: \usepackage[english]{babel}
+#+LaTeX_HEADER: \usepackage{color} 
+#+LaTeX_HEADER: \usepackage[section]{placeins} 
+#+LaTeX_HEADER: \definecolor{mygreen}{RGB}{28,172,0} 
+#+LaTeX_HEADER: \definecolor{mylilas}{RGB}{170,55,241}
+#+LaTeX_CLASS_OPTIONS: [listings, listings-bw, listings-color, listings-sv]
+#+LATEX_HEADER: \usepackage[margin=1.25in]{geometry}
+#+OPTIONS: toc:1
+
+#+TITLE: Analysis of melting and phase transformation in terms of evolution of kinetic and potential energies
+#+AUTHOR: MSE 6270: Introduction to Atomistic Simulations @@latex:\\@@ Homework #4 @@latex:\\\\@@Yosyp Schwab
+#+EMAIL: ys4ea@virginia.edu
+
+* Heading
+
+\begin{equation}
+r = \sigma \sqrt[\leftroot{-3}\uproot{3}6]{2} = 3.82198 A
+\end{equation}
+
+#+CAPTION: Plot of potential energy and its negative gradient (force) versus interatomic distance. The equilibrium interatomic distance is labeled.
+#+NAME: fig:q4a
+file:fig/q4a.png
+
+* References
+1. The argon melting curve to very high pressures. C-S. Zha, R. Boehler, D. A. Young, M. Ross. The Journal of Chemical Physics 85, 1034 (1986)
+
+2. Extended and accurate determination of the melting curves of argon, helium ice (H_{2}O), and hydrogen (H_2). F. Datchu, P. Laubeyre, R. LeToullec. Physical Review B 61, 6535 (2000)
