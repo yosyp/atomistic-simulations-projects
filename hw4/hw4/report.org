@@ -1,0 +1,56 @@
+#+LaTeX_HEADER: \usepackage[parameters]{listings}
+#+LaTeX_HEADER: \usepackage{listings}
+#+LaTeX_HEADER: \usepackage[english]{babel}
+#+LaTeX_HEADER: \usepackage{color} 
+#+LaTeX_HEADER: \usepackage[section]{placeins} 
+#+LaTeX_HEADER: \definecolor{mygreen}{RGB}{28,172,0} 
+#+LaTeX_HEADER: \definecolor{mylilas}{RGB}{170,55,241}
+#+LaTeX_CLASS_OPTIONS: [listings, listings-bw, listings-color, listings-sv]
+#+LATEX_HEADER: \usepackage[margin=1.25in]{geometry}
+#+OPTIONS: toc:1
+
+#+TITLE: Analysis of melting and phase transformation in terms of evolution of kinetic and potential energies
+#+AUTHOR: MSE 6270: Introduction to Atomistic Simulations @@latex:\\@@ Homework #4 @@latex:\\\\@@Yosyp Schwab
+#+EMAIL: ys4ea@virginia.edu
+
+* Question 1
+Using the provided experimental value of molar volume of solid Ar at
+the melting temperature and 1 atm pressure of $V_m = 24.6 \frac{cm^3}{mole}$,
+we can directly compute the lattice parameter $a$ as follows:
+\begin{equation}
+a = \sqrt[3]{4 \frac{V_m}{Av}} = 5.467 A
+\end{equation}
+where $Av = 6.022\times 10^{23}$ is Avogardo's constant, and an
+implicit unit conversion is performed in the above equation from $cm$
+to $A$. 
+
+* Question 2
+
+| Specified Input Temperature [K] | Real Temperature [K] |
+|---------------------------------+----------------------|
+|                              60 |                 68.1 |
+|                              74 |                 81.8 |
+|                              75 |                 82.7 |
+|                              76 |                 83.6 |
+|                              77 |                 84.5 |
+|                              78 |                 85.4 |
+|                              79 |                 86.3 |
+|                              80 |                 87.2 |
+|                              85 |                 91.6 |
+
+
+* Question 3
+
+* Question 4
+
+* Question 5
+
+
+#+CAPTION: Plot of potential energy and its negative gradient (force) versus interatomic distance. The equilibrium interatomic distance is labeled.
+#+NAME: fig:q4a
+file:fig/q4a.png
+
+* References
+1. The argon melting curve to very high pressures. C-S. Zha, R. Boehler, D. A. Young, M. Ross. The Journal of Chemical Physics 85, 1034 (1986)
+
+2. Extended and accurate determination of the melting curves of argon, helium ice (H_{2}O), and hydrogen (H_2). F. Datchu, P. Laubeyre, R. LeToullec. Physical Review B 61, 6535 (2000)
