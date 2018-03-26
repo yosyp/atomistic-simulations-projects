@@ -7,7 +7,7 @@
 #+LaTeX_HEADER: \definecolor{mylilas}{RGB}{170,55,241}
 #+LaTeX_CLASS_OPTIONS: [listings, listings-bw, listings-color, listings-sv]
 #+LATEX_HEADER: \usepackage[margin=1.25in]{geometry}
-#+OPTIONS: toc:1
+#+OPTIONS: toc:nil
 
 #+TITLE: Analysis of melting and phase transformation in terms of evolution of kinetic and potential energies
 #+AUTHOR: MSE 6270: Introduction to Atomistic Simulations @@latex:\\@@ Homework #4 @@latex:\\\\@@Yosyp Schwab
@@ -26,30 +26,97 @@ to $A$.
 
 * Question 2
 
-| Specified Input Temperature [K] | Real Temperature [K] |
-|---------------------------------+----------------------|
-|                              60 |                 68.1 |
-|                              74 |                 81.8 |
-|                              75 |                 82.7 |
-|                              76 |                 83.6 |
-|                              77 |                 84.5 |
-|                              78 |                 85.4 |
-|                              79 |                 86.3 |
-|                              80 |                 87.2 |
-|                              85 |                 91.6 |
-|                              90 |                 96.1 |
-|                              91 |                 97.1 |
-|                              92 |                 97.9 |
-|                              93 |                 98.8 |
-|                              94 |                 99.7 |
-|                              95 |                100.6 |
-|                             100 |                105.3 |
+Before simulating melting, the system was first equilibrated by
+simulating a short time duration using velocity distribution and
+pressure control. This was done to ensure that the initial velocity is
+set to zero for the specified temperature. A Berendsen barostate ewas
+used with P = 0.00100 GPa (1 atm) with $\beta = 0.10
+\frac{1}{GPa}$. An unneccesarily small timestep was chosed in order to
+ensure the initial velocities are accurace, and the system was
+simulated for 1 ps with 100,000 timesteps. By observing the total
+energy fluctuations during the simulations, it was ensured that
+equilibrium was reached as indicated by a reduction fo fluctuations in
+total energy (to the order of 0.001 fluctuations in line with
+thermodynamic properties and effects of the cut-off radius). The
+temperature fluctuations also diminished, but remained at 3-4% of the
+equilibrium temperature. 
 
+#+CAPTION: Temperature of each corresponding system with different initial temperatures during the 1ps equilibration simulation. The temperature is first nearly doubled in the first few iterations, and quickly returns to oscillations around an equilibrium temperature. Here, the temperature at each timestep is calculated $T = \sum_{i=1}^{N_{atoms}} \frac{2 E_{kinetic}}{3 N k_b}$ where $k_b$ is Boltzmann's constant, and $N = 500$ is the total number of atoms in the system. 
+#+NAME: fig:q2temp1
+file:figures/q2-temp1.png
+
+#+CAPTION: The initial (specified) temperature is compared with the trajectory-averaged temperature after the 1 ps equilibration. In all instances simulated, the equilibrated temperature is higher than the specified initial temperature. However, the size of the difference decreases at increasing temperatures. At specified T=85 K, the equilibrated temperature is T=87 K, however at specified T=100 K, the equilibrated temperature is T= 100.5 K.
+#+NAME: fig:q2temp2
+file:figures/q2-temp2.png
+
+The final configuration of the equilibrated system after 1 ps was
+stored and used as a starting point for the longer heating/melting
+simulation. In addition to using a Berendsen barostat with P = 0.00010
+GPa (1 atm) with $\beta = 0.10 GPa$, a Berendsen thermostat was used
+to enforce the temperature of the system with $\tau = 2 ps$. A
+timestep inline with the cutoff distance was chosen to be $\Delta t =
+0.0010 ps$, and 100,000 steps were calculated to simulation 100 ps of
+time. 
+
+Visual analysis of the initial and final configurations below
+and above the melting point shows a clear distinction of melting. Up
+to T=91 K melting did not occur, and at T=92 K a clear indication of
+melting was signified by the absence of any previously observed
+crystal structure or long-range order of the final atomic
+configurations. 
+
+#+CAPTION: Left: initial atomic configuration at t=0 ps. Right: final atomic configuration at t=100 ps. Simulaiton was first equilibrated using a Berendsen barostat, and then advanced in time using both a thermostat and barostat. T = 90 K. The crystal structure is clearly visible even after simulating for 100 ps. (Colors correspond to the x-velocity of each atom). 
+#+NAME: fig:q2t90
+file:figures/t90-combined.png
+
+#+CAPTION: Left: initial atomic configuration at t=0 ps. Right: final atomic configuration at t=100 ps. Simulaiton was first equilibrated using a Berendsen barostat, and then advanced in time using both a thermostat and barostat. T = 91 K. The crystal structure is clearly visible even after simulating for 100 ps. (Colors correspond to the x-velocity of each atom). 
+#+NAME: fig:q1t91
+file:figures/t91-combined.png
+
+#+CAPTION: Left: initial atomic configuration at t=0 ps. Right: final atomic configuration at t=100 ps. Simulaiton was first equilibrated using a Berendsen barostat, and then advanced in time using both a thermostat and barostat. T = 92 K. Unlike the previous two simulations, the initial crystal structure is no longer present after 100 ps of heating, and no long range order can be detected in the final atomic configuration. This suggests that melting of an Ar crystal at 1 atm pressure occurs at T = 92 K, which is in disagreement with the provided phase diagram. (Colors correspond to the x-velocity of each atom). 
+#+NAME: fig:q1t92
+file:figures/t92-combined.png
+
+
+#+CAPTION: The temperature was tracked throughout the heating/melting simulation using the same relation for temperature as before, $T = \sum_{i=1}^{N_{atoms}} \frac{2 E_{kinetic}}{3 N k_b}$ where $k_b$ is Boltzmann's constant, and $N = 500$ is the total number of atoms in the system. Using this plot style is it difficult to determine a trend between initial and final temperatures around the melting point. However there is clear intersection of lines, suggesting a nonlinear trend. The following figure illustrated this better.
+#+NAME: fig:q2tempheating1
+file:figures/q2-tempheating1.png
+
+#+CAPTION: The initial (after 1 ps equilibration) temperature is compared wtih the trajectory-average temperature after the 100 ps heating/melting simulation. There appears a clear jump from T=91 K to T=92 K at which point melting occured, and the data follows a new linear trend with a different slope. 
+#+NAME: fig:q2tempheating2
+file:figures/q2-tempheating2.png
 
 
 * Question 3
+#+CAPTION: It is (roughly) possible to determine the temperature of the solid-liquid transition from this dependence. When the crystal is heated to sub-melting temperature, the potential energy vs temperature plot remains "compact" meaning that the curve does trace a noticable area. When the crystal is heating up to and beyond its melting point, the potential energy vs temperature curve traces a more pronounced area. Furthermore, since the change in potential energy is equal to the work done by the system, it is clear from the plot that more work has occured (melting). Integrating the areas of the traced curves of this plot is equivalent to the integral of work over time, which is power. 
+#+NAME: fig:q2tempheating2
+file:figures/q3-1.png
 
 * Question 4
+The Maxwell-Boltzmann distribution defines the distribution of speeds
+for a gas at a certain temperature. From this distribution functions,
+the most probably speeds, the average speed, and the root-mean-square
+speed can all be dervied. The Maxwell-Boltzmann distrituion in terms
+of the scalar quantity speed $c$ can be written as:
+\begin{equation}
+f(c) = 4 \pi c^2 \bigg( \frac{m}{2 \pi k_b T} \bigg)^{3/2} e^{\frac{-m c^2}{2 k_b T}}
+\end{equation}
+
+To visualize the distribution of velocities in our simulated system, a
+histogram is constructed with certan ranges of speeds "binned" into
+one value. Using 50 bins has shown to provide a detailed
+histogram. To get better statistics of the velocity distribution, data
+over multiple timesteps was considered in the histogram.
+
+#+CAPTION: Comparing the velocity distribution of the simulation initially set to T=92 K, equilibrated to T=93.4 K, and final temperate of T=90 K. There is a close agreement between the distribution of speeds observed in the simulation and predicted by the Maxwell-Botlzmann distribution, which is surprising because the MB distribution is typically used to describe gases not solids or liquids.
+#+NAME: fig:q4-1
+file:figures/q4-90.png
+
+
+#+CAPTION: Comparing the velocity distribution of the simulation initially set to T=94 K, equilibrated to T=95.5 K, and final temperate of T=93 K. There is a close agreement between the distribution of speeds observed in the simulation and predicted by the Maxwell-Botlzmann distribution, which is surprising because the MB distribution is typically used to describe gases not solids or liquids.
+#+NAME: fig:q4-2
+[[file:figures/q4-92.png]]
+
 
 * Question 5
 
