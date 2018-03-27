@@ -21,7 +21,7 @@ default:
 	@echo "Compiling Code MSE6270_MD"
 	@echo "C++ version"
 	$(MAKE) $(EXE_MD)
-#	$(MAKE) $(EXE_CG)
+	$(MAKE) $(EXE_CG)
 #	$(MAKE) $(EXE_dMD)
 #	$(MAKE) $(EXE_Conv)
 
