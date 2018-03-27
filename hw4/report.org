@@ -120,10 +120,20 @@ file:figures/q4-90.png
 
 * Question 5
 
+The magnitude of the potential energy in HW3 is ~3 eV bigger than in
+HW4. 
 
-#+CAPTION: Plot of potential energy and its negative gradient (force) versus interatomic distance. The equilibrium interatomic distance is labeled.
-#+NAME: fig:q4a
-file:fig/q4a.png
+KE identical
+
+#+CAPTION: 
+#+NAME: fig:q6-quad
+file:figures/q6-quad.png
+
+#+CAPTION:
+#+NAME: fig:q6-energy
+file:figures/q6-energy.png
+
+
 
 * References
 1. The argon melting curve to very high pressures. C-S. Zha, R. Boehler, D. A. Young, M. Ross. The Journal of Chemical Physics 85, 1034 (1986)
