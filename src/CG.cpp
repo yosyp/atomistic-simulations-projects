@@ -10,9 +10,9 @@ using namespace MSE6270_MD;
 
 int main() {
   static const std::string output_file = "ArHW4.data";  // output file
-  static const int nx = 5;                           // number of unit cells in x,y, and z direction
-  static const int ny = 5;
-  static const int nz = 5;
+  static const int nx = 7;                           // number of unit cells in x,y, and z direction
+  static const int ny = 7;
+  static const int nz = 7;
   static const double a_lat = 5.467;                    // lattice parameter
   static const auto lattice = Reader_CG::Lattice::FCC;  // lattice type; check Reader_CG in IO.cpp for more details
 
