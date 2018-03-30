@@ -1,3 +1,7 @@
+%
+% This corresponds to:
+% HW4 Question 2
+%
 clear;clc;
 % 1 step    % 2 khist   % 3 nx
 % 4 y       % 5 z       % 6 vx
@@ -14,7 +18,7 @@ m0 = 1.6605402e-27;     % !< Atomic mass unit [kg]
 aps2ms = 100; % speed conversion: 1 A/ps = 100 m/s
 
 m_argon = m0*39.948;    % units: kg
-N = 500;                % number of atoms 
+N = 1372;               % number of atoms 
 
 directories = [
 %     "equilT60" ...
@@ -60,7 +64,7 @@ plot(time, 2*Ek/(3*N*kb), 'LineWidth', 3);
     xlabel('time [ps]','FontWeight','bold','Color','black');
     ylabel('Temperature [K]','FontSize',18,'FontWeight','bold','Color','black');
     xt = get(gca, 'XTick'); set(gca, 'FontSize', 16);  set(gca, 'LineWidth', 2);
-    saveas(gcf,'figures/q2-temp1.png');
+%     saveas(gcf,'figures/q2-temp1.png');
 
 figure;
 plot(str2double(directories(:,3)), mean(2*Ek(:,end-4:end)'/(3*N*kb)), '-*', 'LineWidth', 3, 'MarkerSize', 12);
@@ -68,5 +72,5 @@ plot(str2double(directories(:,3)), mean(2*Ek(:,end-4:end)'/(3*N*kb)), '-*', 'Lin
     xlabel('Initial Temperature [K]','FontWeight','bold','Color','black');
     ylabel('Equilibrated Temperature [K]','FontSize',18,'FontWeight','bold','Color','black');
     xt = get(gca, 'XTick'); set(gca, 'FontSize', 16);  set(gca, 'LineWidth', 2);
-    saveas(gcf,'figures/q2-temp2.png');
+%     saveas(gcf,'figures/q2-temp2.png');
 

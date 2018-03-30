@@ -1,3 +1,7 @@
+%
+% This corresponds to:
+% HW4 Question 2
+%
 clear;clc;
 % 1 step    % 2 khist   % 3 nx
 % 4 y       % 5 z       % 6 vx
@@ -14,7 +18,7 @@ m0 = 1.6605402e-27;     % !< Atomic mass unit [kg]
 aps2ms = 100; % speed conversion: 1 A/ps = 100 m/s
 
 m_argon = m0*39.948;    % units: kg
-N = 500;                % number of atoms 
+N = 1372;               % number of atoms 
 
 directories = [
 %     "nptT60", "T = 60 K"; ...
@@ -37,7 +41,7 @@ directories = [
 
 datadir = "data";
 dt = 0.001; % psec
-time = [0:5000*dt:100000*dt];
+time = [0:2500*dt:100000*dt];
 for i = 1:length(directories)
     path = sprintf('%s/%s/', directories(i,1), datadir);
     files(i,:) = dir(sprintf('%s*.d', path));

@@ -8,168 +8,168 @@ Starting the simulation
 Number steps: 100000
 Saving every: 5000 steps.
 Assigning the initial velocity corresponding to T = 79.000000 K
-time = 1e-05, Etot = -26.9423, T = 158
+time = 1e-05, Etot = -79.7057, T = 158
 Writing equilT79.data
 Saving snapshot to time000
 Writing data/time000.d
-time = 0.01001, Etot = -26.9618, T = 157.649
-time = 0.02001, Etot = -26.9808, T = 156.583
-time = 0.03001, Etot = -26.9989, T = 154.765
-time = 0.04001, Etot = -27.0164, T = 152.138
-time = 0.05001, Etot = -27.0345, T = 148.631
+time = 0.01001, Etot = -79.7322, T = 157.409
+time = 0.02001, Etot = -79.7713, T = 155.614
+time = 0.03001, Etot = -79.9054, T = 152.584
+time = 0.04001, Etot = -80.084, T = 148.267
+time = 0.05001, Etot = -80.2422, T = 142.597
 Writing equilT79.data
 Saving snapshot to time050
 Writing data/time050.d
-time = 0.06001, Etot = -27.0577, T = 144.165
-time = 0.07001, Etot = -27.0869, T = 138.671
-time = 0.08001, Etot = -27.1135, T = 132.101
-time = 0.09001, Etot = -27.1377, T = 124.467
-time = 0.10001, Etot = -27.1617, T = 115.884
+time = 0.06001, Etot = -80.3701, T = 135.526
+time = 0.07001, Etot = -80.4664, T = 127.068
+time = 0.08001, Etot = -80.5414, T = 117.351
+time = 0.09001, Etot = -80.5994, T = 106.669
+time = 0.10001, Etot = -80.6447, T = 95.5129
 Writing equilT79.data
 Saving snapshot to time100
 Writing data/time100.d
-time = 0.11001, Etot = -27.1829, T = 106.605
-time = 0.12001, Etot = -27.1967, T = 97.0478
-time = 0.13001, Etot = -27.2087, T = 87.7617
-time = 0.14001, Etot = -27.2175, T = 79.3453
-time = 0.15001, Etot = -27.2232, T = 72.3196
+time = 0.11001, Etot = -80.6751, T = 84.5464
+time = 0.12001, Etot = -80.7038, T = 74.5047
+time = 0.13001, Etot = -80.7274, T = 66.0497
+time = 0.14001, Etot = -80.7485, T = 59.6378
+time = 0.15001, Etot = -80.77, T = 55.4519
 Writing equilT79.data
 Saving snapshot to time150
 Writing data/time150.d
-time = 0.16001, Etot = -27.2303, T = 67.0185
-time = 0.17001, Etot = -27.2355, T = 63.5354
-time = 0.18001, Etot = -27.2396, T = 61.7413
-time = 0.19001, Etot = -27.2413, T = 61.3488
-time = 0.20001, Etot = -27.244, T = 61.9917
+time = 0.16001, Etot = -80.7929, T = 53.4051
+time = 0.17001, Etot = -80.8138, T = 53.2015
+time = 0.18001, Etot = -80.8287, T = 54.4243
+time = 0.19001, Etot = -80.8452, T = 56.6212
+time = 0.20001, Etot = -80.8618, T = 59.3681
 Writing equilT79.data
 Saving snapshot to time200
 Writing data/time200.d
-time = 0.21001, Etot = -27.246, T = 63.2959
-time = 0.22001, Etot = -27.2506, T = 64.9291
-time = 0.23001, Etot = -27.2519, T = 66.6304
-time = 0.24001, Etot = -27.2521, T = 68.2231
-time = 0.25001, Etot = -27.2537, T = 69.6133
+time = 0.21001, Etot = -80.8737, T = 62.3071
+time = 0.22001, Etot = -80.8831, T = 65.1624
+time = 0.23001, Etot = -80.8881, T = 67.7411
+time = 0.24001, Etot = -80.8939, T = 69.9228
+time = 0.25001, Etot = -80.8968, T = 71.6461
 Writing equilT79.data
 Saving snapshot to time250
 Writing data/time250.d
-time = 0.26001, Etot = -27.2564, T = 70.776
-time = 0.27001, Etot = -27.26, T = 71.7308
-time = 0.28001, Etot = -27.2635, T = 72.516
-time = 0.29001, Etot = -27.2627, T = 73.166
-time = 0.30001, Etot = -27.2624, T = 73.6976
+time = 0.26001, Etot = -80.9028, T = 72.893
+time = 0.27001, Etot = -80.9043, T = 73.6781
+time = 0.28001, Etot = -80.9053, T = 74.0396
+time = 0.29001, Etot = -80.9084, T = 74.0355
+time = 0.30001, Etot = -80.9093, T = 73.7398
 Writing equilT79.data
 Saving snapshot to time300
 Writing data/time300.d
-time = 0.31001, Etot = -27.2644, T = 74.1071
-time = 0.32001, Etot = -27.2632, T = 74.3745
-time = 0.33001, Etot = -27.2634, T = 74.4781
-time = 0.34001, Etot = -27.2634, T = 74.4045
-time = 0.35001, Etot = -27.2625, T = 74.1586
+time = 0.31001, Etot = -80.909, T = 73.2384
+time = 0.32001, Etot = -80.912, T = 72.6232
+time = 0.33001, Etot = -80.9148, T = 71.9832
+time = 0.34001, Etot = -80.9194, T = 71.3973
+time = 0.35001, Etot = -80.9234, T = 70.9261
 Writing equilT79.data
 Saving snapshot to time350
 Writing data/time350.d
-time = 0.36001, Etot = -27.264, T = 73.7663
-time = 0.37001, Etot = -27.2664, T = 73.2767
-time = 0.38001, Etot = -27.2654, T = 72.7599
-time = 0.39001, Etot = -27.2639, T = 72.2995
-time = 0.40001, Etot = -27.2648, T = 71.9758
+time = 0.36001, Etot = -80.9264, T = 70.6112
+time = 0.37001, Etot = -80.9263, T = 70.4748
+time = 0.38001, Etot = -80.9278, T = 70.5209
+time = 0.39001, Etot = -80.9282, T = 70.7383
+time = 0.40001, Etot = -80.9302, T = 71.1036
 Writing equilT79.data
 Saving snapshot to time400
 Writing data/time400.d
-time = 0.41001, Etot = -27.265, T = 71.8482
-time = 0.42001, Etot = -27.264, T = 71.9382
-time = 0.43001, Etot = -27.2612, T = 72.2265
-time = 0.44001, Etot = -27.2597, T = 72.6656
-time = 0.45001, Etot = -27.259, T = 73.1997
+time = 0.41001, Etot = -80.9322, T = 71.587
+time = 0.42001, Etot = -80.935, T = 72.1583
+time = 0.43001, Etot = -80.9379, T = 72.7906
+time = 0.44001, Etot = -80.9386, T = 73.4613
+time = 0.45001, Etot = -80.9362, T = 74.1494
 Writing equilT79.data
 Saving snapshot to time450
 Writing data/time450.d
-time = 0.46001, Etot = -27.26, T = 73.7837
-time = 0.47001, Etot = -27.2605, T = 74.3918
-time = 0.48001, Etot = -27.2611, T = 75.0196
-time = 0.49001, Etot = -27.2594, T = 75.6806
-time = 0.50001, Etot = -27.2586, T = 76.3986
+time = 0.46001, Etot = -80.9334, T = 74.8337
+time = 0.47001, Etot = -80.9289, T = 75.4923
+time = 0.48001, Etot = -80.93, T = 76.105
+time = 0.49001, Etot = -80.926, T = 76.6565
+time = 0.50001, Etot = -80.9256, T = 77.1379
 Writing equilT79.data
 Saving snapshot to time500
 Writing data/time500.d
-time = 0.51001, Etot = -27.2603, T = 77.1957
-time = 0.52001, Etot = -27.2595, T = 78.0821
-time = 0.53001, Etot = -27.2585, T = 79.0489
-time = 0.54001, Etot = -27.2584, T = 80.0668
-time = 0.55001, Etot = -27.2602, T = 81.0937
+time = 0.51001, Etot = -80.9252, T = 77.5484
+time = 0.52001, Etot = -80.9266, T = 77.895
+time = 0.53001, Etot = -80.9242, T = 78.1902
+time = 0.54001, Etot = -80.9242, T = 78.4478
+time = 0.55001, Etot = -80.9219, T = 78.6812
 Writing equilT79.data
 Saving snapshot to time550
 Writing data/time550.d
-time = 0.56001, Etot = -27.2577, T = 82.0806
-time = 0.57001, Etot = -27.2599, T = 82.9793
-time = 0.58001, Etot = -27.2613, T = 83.748
-time = 0.59001, Etot = -27.2608, T = 84.3534
-time = 0.60001, Etot = -27.2621, T = 84.7734
+time = 0.56001, Etot = -80.9257, T = 78.9027
+time = 0.57001, Etot = -80.922, T = 79.1248
+time = 0.58001, Etot = -80.9208, T = 79.3618
+time = 0.59001, Etot = -80.9212, T = 79.6217
+time = 0.60001, Etot = -80.9251, T = 79.8964
 Writing equilT79.data
 Saving snapshot to time600
 Writing data/time600.d
-time = 0.61001, Etot = -27.2622, T = 84.9982
-time = 0.62001, Etot = -27.2629, T = 85.0282
-time = 0.63001, Etot = -27.2627, T = 84.8721
-time = 0.64001, Etot = -27.2633, T = 84.547
-time = 0.65001, Etot = -27.2619, T = 84.0779
+time = 0.61001, Etot = -80.9247, T = 80.1579
+time = 0.62001, Etot = -80.9285, T = 80.3688
+time = 0.63001, Etot = -80.929, T = 80.4978
+time = 0.64001, Etot = -80.9296, T = 80.53
+time = 0.65001, Etot = -80.9306, T = 80.4668
 Writing equilT79.data
 Saving snapshot to time650
 Writing data/time650.d
-time = 0.66001, Etot = -27.2653, T = 83.4987
-time = 0.67001, Etot = -27.2645, T = 82.8494
-time = 0.68001, Etot = -27.2667, T = 82.1741
-time = 0.69001, Etot = -27.2662, T = 81.5152
-time = 0.70001, Etot = -27.2667, T = 80.908
+time = 0.66001, Etot = -80.9308, T = 80.3217
+time = 0.67001, Etot = -80.9329, T = 80.1155
+time = 0.68001, Etot = -80.9313, T = 79.8737
+time = 0.69001, Etot = -80.9241, T = 79.6221
+time = 0.70001, Etot = -80.9257, T = 79.384
 Writing equilT79.data
 Saving snapshot to time700
 Writing data/time700.d
-time = 0.71001, Etot = -27.267, T = 80.3787
-time = 0.72001, Etot = -27.2667, T = 79.9414
-time = 0.73001, Etot = -27.2643, T = 79.6006
-time = 0.74001, Etot = -27.2639, T = 79.3545
-time = 0.75001, Etot = -27.2644, T = 79.1984
+time = 0.71001, Etot = -80.9311, T = 79.1764
+time = 0.72001, Etot = -80.9292, T = 79.0091
+time = 0.73001, Etot = -80.931, T = 78.8835
+time = 0.74001, Etot = -80.9298, T = 78.7956
+time = 0.75001, Etot = -80.9276, T = 78.7396
 Writing equilT79.data
 Saving snapshot to time750
 Writing data/time750.d
-time = 0.76001, Etot = -27.2642, T = 79.126
-time = 0.77001, Etot = -27.2648, T = 79.1335
-time = 0.78001, Etot = -27.2651, T = 79.2175
-time = 0.79001, Etot = -27.2674, T = 79.3727
-time = 0.80001, Etot = -27.2688, T = 79.5905
+time = 0.76001, Etot = -80.9285, T = 78.7104
+time = 0.77001, Etot = -80.9256, T = 78.7052
+time = 0.78001, Etot = -80.9213, T = 78.7242
+time = 0.79001, Etot = -80.9199, T = 78.7722
+time = 0.80001, Etot = -80.9205, T = 78.8574
 Writing equilT79.data
 Saving snapshot to time800
 Writing data/time800.d
-time = 0.81001, Etot = -27.2704, T = 79.8564
-time = 0.82001, Etot = -27.2691, T = 80.1542
-time = 0.83001, Etot = -27.2677, T = 80.4698
-time = 0.84001, Etot = -27.2658, T = 80.7922
-time = 0.85001, Etot = -27.2647, T = 81.1144
+time = 0.81001, Etot = -80.9238, T = 78.9886
+time = 0.82001, Etot = -80.9211, T = 79.1688
+time = 0.83001, Etot = -80.9197, T = 79.3922
+time = 0.84001, Etot = -80.9178, T = 79.6454
+time = 0.85001, Etot = -80.9205, T = 79.9131
 Writing equilT79.data
 Saving snapshot to time850
 Writing data/time850.d
-time = 0.86001, Etot = -27.265, T = 81.4326
-time = 0.87001, Etot = -27.2652, T = 81.7484
-time = 0.88001, Etot = -27.2669, T = 82.0712
-time = 0.89001, Etot = -27.268, T = 82.4197
-time = 0.90001, Etot = -27.2651, T = 82.8197
+time = 0.86001, Etot = -80.9193, T = 80.1799
+time = 0.87001, Etot = -80.9228, T = 80.4324
+time = 0.88001, Etot = -80.9222, T = 80.6592
+time = 0.89001, Etot = -80.9162, T = 80.8526
+time = 0.90001, Etot = -80.9147, T = 81.0073
 Writing equilT79.data
 Saving snapshot to time900
 Writing data/time900.d
-time = 0.91001, Etot = -27.2634, T = 83.2917
-time = 0.92001, Etot = -27.2655, T = 83.8384
-time = 0.93001, Etot = -27.2678, T = 84.4375
-time = 0.94001, Etot = -27.2672, T = 85.0436
-time = 0.95001, Etot = -27.2664, T = 85.6017
+time = 0.91001, Etot = -80.9156, T = 81.122
+time = 0.92001, Etot = -80.9134, T = 81.1982
+time = 0.93001, Etot = -80.9122, T = 81.2378
+time = 0.94001, Etot = -80.9098, T = 81.2428
+time = 0.95001, Etot = -80.9079, T = 81.2155
 Writing equilT79.data
 Saving snapshot to time950
 Writing data/time950.d
-time = 0.96001, Etot = -27.2654, T = 86.061
-time = 0.97001, Etot = -27.2644, T = 86.3822
-time = 0.98001, Etot = -27.2663, T = 86.5415
-time = 0.99001, Etot = -27.266, T = 86.531
-time = 1.00001, Etot = -27.2667, T = 86.3593
+time = 0.96001, Etot = -80.9051, T = 81.1582
+time = 0.97001, Etot = -80.9089, T = 81.0759
+time = 0.98001, Etot = -80.9073, T = 80.9777
+time = 0.99001, Etot = -80.9085, T = 80.8789
+time = 1.00001, Etot = -80.9059, T = 80.7982
 Writing equilT79.data
 Saving snapshot to time1000
 Writing data/time1000.d
-Runtime: 79.7491 s
+Runtime: 320.204 s

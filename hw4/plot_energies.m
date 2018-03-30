@@ -14,7 +14,7 @@ m0 = 1.6605402e-27;     % !< Atomic mass unit [kg]
 aps2ms = 100; % speed conversion: 1 A/ps = 100 m/s
 
 m_argon = m0*39.948;    % units: kg
-N = 500;                % number of atoms 
+N = 1372;               % number of atoms 
 
 directories = [
 %     "equilT60" ...
@@ -36,19 +36,39 @@ directories = [
     "nptT91", "T = 91 K HW4", 91; ...
     "../hw3", "T = 91 K HW3", 91; ...
 ];
-disp('o');
+nptT91 = dir(sprintf('nptT91/data/*.d'));
+hw3 = dir(sprintf('../hw3/data/*.d'));
+
+i=1;
+    for k = 1:length(nptT91)-1
+        snapshot{i,k} = dlmread( ...
+                        [path,nptT91(i,k).name],' ');
+        T(i,k) = sum(snapshot{i,k}(:,11));                    
+        Ek(i,k) = sum(snapshot{i,k}(:,10));
+        Ep(i,k) = sum(snapshot{i,k}(:,9));
+        Etot(i,k) = sum(snapshot{i,k}(:,12));
+    end
+i=2; 
+    for k = 1:length(hw3)-1
+        snapshot{i,k} = dlmread( ...
+                        [path,hw3(i,k).name],' ');
+        T(i,k) = sum(snapshot{i,k}(:,11));                    
+        Ek(i,k) = sum(snapshot{i,k}(:,10));
+        Ep(i,k) = sum(snapshot{i,k}(:,9));
+        Etot(i,k) = sum(snapshot{i,k}(:,12));
+    end
+    
+    
 datadir = "data";
 dt = 0.001; % psec
 time = [0:5000*dt:100000*dt];
 for i = 1:length(directories)-1
-    disp(i);
+fprintf("outer %d\n",i);
 
     path = sprintf('%s/%s/', directories(i,1), datadir);
-    files(i,:) = dir(sprintf('%s*.d', path));
-    disp(i);
-
-    for k = 1:length(files(i,:))
-        disp(k);
+    files(1,:) = dir(sprintf('%s*.d', path));
+    for k = 1:length(files(i,:))-1
+fprintf("inner %d\n",k);
 
         snapshot{i,k} = dlmread( ...
                         [path,files(i,k).name],' ');
