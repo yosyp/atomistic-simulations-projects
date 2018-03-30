@@ -1,0 +1,30 @@
+#+LaTeX_HEADER: \usepackage[parameters]{listings}
+#+LaTeX_HEADER: \usepackage{listings}
+#+LaTeX_HEADER: \usepackage[english]{babel}
+#+LaTeX_HEADER: \usepackage{color} 
+#+LaTeX_HEADER: \usepackage[section]{placeins} 
+#+LaTeX_HEADER: \definecolor{mygreen}{RGB}{28,172,0} 
+#+LaTeX_HEADER: \definecolor{mylilas}{RGB}{170,55,241}
+#+LaTeX_CLASS_OPTIONS: [listings, listings-bw, listings-color, listings-sv]
+#+LATEX_HEADER: \usepackage[margin=1.25in]{geometry}
+#+OPTIONS: toc:nil
+
+#+TITLE: Understanding The Relationship Between Microscopic Mechanisms and Continuum Description of Diffusion
+#+AUTHOR: MSE 6270: Introduction to Atomistic Simulations @@latex:\\@@ Homework #5 @@latex:\\\\@@Yosyp Schwab
+#+EMAIL: ys4ea@virginia.edu
+#+DATE: March 22, 2018
+
+* Question 1
+\begin{equation}
+a = \sqrt[3]{4 \frac{V_m}{Av}} = 5.467 A
+\end{equation}
+
+#+CAPTION: 
+#+NAME: fig:
+file:figures/q6-quad.png
+
+* References
+1. The argon melting curve to very high pressures. C-S. Zha, R. Boehler, D. A. Young, M. Ross. The Journal of Chemical Physics 85, 1034 (1986)
+
+2. Extended and accurate determination of the melting curves of argon, helium ice (H_{2}O), and hydrogen (H_2). F. Datchu, P. Laubeyre, R. LeToullec. Physical Review B 61, 6535 (2000)
+f
