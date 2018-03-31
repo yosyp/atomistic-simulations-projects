@@ -13,7 +13,7 @@ int main() {
   static const int nx = 7;                           // number of unit cells in x,y, and z direction
   static const int ny = 7;
   static const int nz = 7;
-  static const double a_lat = 5.467;                    // lattice parameter
+  static const double a_lat = 5.78;                    // lattice parameter
   static const auto lattice = Reader_CG::Lattice::FCC;  // lattice type; check Reader_CG in IO.cpp for more details
 
   System system;                               // an object for storing MD system
