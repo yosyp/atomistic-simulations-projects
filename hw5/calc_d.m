@@ -1,6 +1,6 @@
 %
 % This corresponds to:
-% HW5 Question 3
+% HW5 Question 2
 % 1 step    % 2 khist   % 3 x
 % 4 y       % 5 z       % 6 vx
 % 7 vy      % 8 vz      % 9 Ep
@@ -33,43 +33,34 @@ for k = 1:length(files(i,:))
     snapshot{i,k} = dlmread( ...
                     [path,files(i,k).name],' ');
     for j = 1:N
+%         if k > 1
+%         if (snapshot{i,k}(j,3) - snapshot{i,k-1}(j,3)) > 20
+%             pos_x(k,j) = snapshot{i,k}(j,3);
+            
         pos_x(k,j) = snapshot{i,k}(j,3);
         pos_y(k,j) = snapshot{i,k}(j,4);
         pos_z(k,j) = snapshot{i,k}(j,5);
+        if k == 1
+            r0(j) = sqrt( (pos_x(k,j))^2 + (pos_y(k,j))^2 + (pos_z(k,j))^2 );
+        else        
+            r(k,j) = sqrt( (pos_x(k,j))^2 + (pos_y(k,j))^2 + (pos_z(k,j))^2 );
+        end
     end
 end
 
-%% Plot single atom trajectory
-% i = 300; % number of atom to plot
-% cutoff = 20;
-i = 900; % number of atom to plot
-cutoff = 0;
-x = pos_x(1:end-cutoff,i)';
-y = pos_y(1:end-cutoff,i)';
-z = zeros(size(x)); col = x;
-surface([x;x],[y;y],[z;z],[col;col],...
-        'facecol','no',...
-        'edgecol','interp',...
-        'linew',2);
-xlim([0 50]); ylim([0 50]); grid on; colorbar; caxis([0 50]);
-title('Trajectory of 1 Particle, color = time');
-xlabel('X Position [Angstrom]','FontWeight','bold','Color','black');
-ylabel('Y Position [Angstrom]','FontWeight','bold','Color','black');
-xt = get(gca, 'XTick'); set(gca, 'FontSize', 16);  set(gca, 'LineWidth', 2);
+plot(pos_x(:,1))
 
-%% Plot all atom trajectories
-figure; hold on;
-for i = 1:N
-    x = pos_x(1:end,i);
-    y = pos_y(1:end,i);
-    plot(x,y)
+%% Calculate Mean Square Displacement
+msd(1) = 0;
+for k = 2:length(files(i,:))
+    for j = 1:N    
+        msd(k) = msd(k-1) + ((r(k,j) - r0(j))^2)/N;
+%         msd(k) = ((r(k,j) - r0(j))^2)/N;
+    end
 end
+% disp(msd/6);
+plot(msd)
 
-xlim([0 50]); ylim([0 50]); grid on;
-title('Trajectory of 1 Particle, color = time');
-xlabel('X Position [Angstrom]','FontWeight','bold','Color','black');
-ylabel('Y Position [Angstrom]','FontWeight','bold','Color','black');
-xt = get(gca, 'XTick'); set(gca, 'FontSize', 16);  set(gca, 'LineWidth', 2);
 
 
 
