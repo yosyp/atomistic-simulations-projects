@@ -15,6 +15,12 @@
 #+DATE: March 22, 2018
 
 * Question 1
+From HW#4 the melting temperature of Ar at pressure of 1 atm and molar
+volume of 24.6 $\frac{cm^3}{mole}$ was $T_{m} = 92 K$. An FCC crystal with
+7x7x7 unite cells was constructed with lattice parameter $a_{fcc} =
+5.78 A" and simulated at constant volume and temperature $T = 1.5
+T_{m} = 138 K$. 
+
 \begin{equation}
 a = \sqrt[3]{4 \frac{V_m}{Av}} = 5.467 A
 \end{equation}
