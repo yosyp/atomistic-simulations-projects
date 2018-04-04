@@ -126,6 +126,9 @@ plot(msd/(6*100))
 % at T = 295 K and 42 kPa, 0.423 cm^2/sec
 % https://journals.aps.org/pr/pdf/10.1103/PhysRev.72.1256
 
+% Unit conversion:
+% 1 Angstrom^2/ps = 10e-4 cm^2/sec = 10e-8 m^2/s
+
 
 
 
