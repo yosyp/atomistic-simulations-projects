@@ -51,7 +51,9 @@ for k = 1:length(files(i,:))
     end
 end
 
-j = 2;
+% j = 12;
+% j = 2;
+j = 342;
 % my_x(1) = pos_x(1,1);
 figure; hold on; plot(pos_x(:,j));
 % my_x = pos_x(:,233);
@@ -61,23 +63,27 @@ box_size = 40.8045;
 % for j = 1:N
     for i=2:length(pos_x(:,j))-1
         
-        fprintf("%d: %4.4f\n", i, (pos_x(i+1,j) - pos_x(i,j)));
-        if (pos_x(i+1,j) - pos_x(i,j)) > box_size/2
-            fprintf("\telse %d: %4.4f\n", i, (pos_x(i+1,j) - pos_x(i,j)));
+        fprintf("1 %d: %4.4f\n", i, abs(pos_x(i-1,j) - pos_x(i,j)));
+        if abs(pos_x(i-1,j) - pos_x(i,j)) > box_size/2
+            fprintf("\tevenelse %d: %4.4f\n", i, abs(pos_x(i-1,j) - pos_x(i,j)));
+            pos_x(i,j) = pos_x(i,j) - box_size;
+        end    
+        
+        fprintf("2 %d: %4.4f\n", i, abs(pos_x(i,j) - pos_x(i+1,j)));        
+        if abs(pos_x(i,j) - pos_x(i+1,j)) > box_size/2
+            pos_x(i+1,j) = pos_x(i+1,j) - box_size;
+            fprintf("\tif %d: %4.4f\n", i, abs(pos_x(i,j) - pos_x(i+1,j)));
+        end
+        
+        fprintf("3 %d: %4.4f\n", i, abs(pos_x(i+1,j) - pos_x(i,j)));
+        if abs(pos_x(i+1,j) - pos_x(i,j)) > box_size/2
+            fprintf("\telse %d: %4.4f\n", i, abs(pos_x(i+1,j) - pos_x(i,j)));
             pos_x(i,j) = pos_x(i,j) + box_size;
         end
         
-        fprintf("%d: %4.4f\n", i, (pos_x(i,j) - pos_x(i+1,j)));        
-        if (pos_x(i,j) - pos_x(i+1,:)) > box_size/2
-            pos_x(i+1,j) = pos_x(i+1,j) + box_size;
-            fprintf("\tif %d: %4.4f\n", i, (pos_x(i,j) - pos_x(i+1,j)));
-        end
+
         
-        fprintf("%d: %4.4f\n", i, (pos_x(i-1,j) - pos_x(i,j)));
-        if (pos_x(i-1,j) - pos_x(i,j)) > box_size/2
-            fprintf("\telse %d: %4.4f\n", i, (pos_x(i-1,j) - pos_x(i,j)));
-            pos_x(i,j) = pos_x(i,j) + box_size;
-        end        
+    
 
 %         if abs(pos_y(i,j) - pos_y(i+1,j)) > box_size/2
 %             if ( abs(pos_y(i,j)) - abs(pos_y(i+1,j))) > (abs(pos_y(i+1,j)) - abs(pos_y(i,j)))
@@ -95,7 +101,7 @@ box_size = 40.8045;
 %         end        
     end
 % end
-plot(pos_x(:,j)); ylim([0 100]);
+plot(pos_x(:,j)); ylim([-100 100]);
 
 % r0 = sqrt( (pos_x(1,:)).^2 + (pos_y(1,:)).^2 + (pos_z(1,:)).^2 );
 % r = sqrt( (pos_x(2:end,:)).^2 + (pos_y(2:end,:)).^2 + (pos_z(2:end,:)).^2 );
