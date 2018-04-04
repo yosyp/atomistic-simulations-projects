@@ -22,6 +22,7 @@ aps2ms = 100; % speed conversion: 1 A/ps = 100 m/s
 
 m_argon = m0*39.948;    % units: kg
 N = 1372;               % number of atoms 
+box_size = 40.8045;     % size of periodic boundary condition box (in x,y,z)
 
 directories = [
      "nptT138", "T = 138 K"; ...
@@ -51,81 +52,81 @@ for k = 1:length(files(i,:))
     end
 end
 
-% j = 12;
-% j = 2;
-j = 342;
-% my_x(1) = pos_x(1,1);
-figure; hold on; plot(pos_x(:,j));
-% my_x = pos_x(:,233);
-% my_y = pos_y(:,1);
-% my_z = pos_z(:,1);
-box_size = 40.8045;
-% for j = 1:N
-    for i=2:length(pos_x(:,j))-1
-        
-        fprintf("1 %d: %4.4f\n", i, abs(pos_x(i-1,j) - pos_x(i,j)));
+for j = 1:N % Loop through all atoms
+    for i=2:length(pos_x(:,j))-1 % Loop through each timestep of 1 atom
+% X        
         if abs(pos_x(i-1,j) - pos_x(i,j)) > box_size/2
-            fprintf("\tevenelse %d: %4.4f\n", i, abs(pos_x(i-1,j) - pos_x(i,j)));
             pos_x(i,j) = pos_x(i,j) - box_size;
-        end    
-        
-        fprintf("2 %d: %4.4f\n", i, abs(pos_x(i,j) - pos_x(i+1,j)));        
+        end        
         if abs(pos_x(i,j) - pos_x(i+1,j)) > box_size/2
             pos_x(i+1,j) = pos_x(i+1,j) - box_size;
-            fprintf("\tif %d: %4.4f\n", i, abs(pos_x(i,j) - pos_x(i+1,j)));
-        end
-        
-        fprintf("3 %d: %4.4f\n", i, abs(pos_x(i+1,j) - pos_x(i,j)));
+        end       
         if abs(pos_x(i+1,j) - pos_x(i,j)) > box_size/2
-            fprintf("\telse %d: %4.4f\n", i, abs(pos_x(i+1,j) - pos_x(i,j)));
             pos_x(i,j) = pos_x(i,j) + box_size;
         end
-        
 
         
-    
+% Y        
+        if abs(pos_y(i-1,j) - pos_y(i,j)) > box_size/2
+            pos_y(i,j) = pos_y(i,j) + box_size;
+        end    
+        if abs(pos_y(i,j) - pos_y(i+1,j)) > box_size/2
+            pos_y(i+1,j) = pos_y(i+1,j) + box_size;
+        end     
+        if abs(pos_y(i+1,j) - pos_y(i,j)) > box_size/2
+            pos_y(i,j) = pos_y(i,j) + box_size;
+        end     
+       
 
-%         if abs(pos_y(i,j) - pos_y(i+1,j)) > box_size/2
-%             if ( abs(pos_y(i,j)) - abs(pos_y(i+1,j))) > (abs(pos_y(i+1,j)) - abs(pos_y(i,j)))
-%                 pos_y(i+1,j) = pos_y(i+1,j) + box_size;                
-%             else
-%                 pos_y(i,j) = pos_y(i,j) + box_size; 
-%             end
-%         end     
-%         if abs(pos_z(i,j) - pos_z(i+1,j)) > box_size/2
-%             if ( abs(pos_z(i,j)) - abs(pos_z(i+1,j))) > (abs(pos_z(i+1,j)) - abs(pos_z(i,j)))
-%                 pos_z(i+1,j) = pos_z(i+1,j) + box_size;                
-%             else
-%                 pos_z(i,j) = pos_z(i,j) + box_size; 
-%             end
-%         end        
+% Z       
+        if abs(pos_z(i-1,j) - pos_z(i,j)) > box_size/2
+            pos_z(i,j) = pos_z(i,j) - box_size;
+        end    
+        if abs(pos_z(i,j) - pos_z(i+1,j)) > box_size/2
+            pos_z(i+1,j) = pos_z(i+1,j) - box_size;
+        end     
+        if abs(pos_z(i+1,j) - pos_z(i,j)) > box_size/2
+            pos_z(i,j) = pos_z(i,j) + box_size;
+        end          
     end
-% end
-plot(pos_x(:,j)); ylim([-100 100]);
+end
 
-% r0 = sqrt( (pos_x(1,:)).^2 + (pos_y(1,:)).^2 + (pos_z(1,:)).^2 );
-% r = sqrt( (pos_x(2:end,:)).^2 + (pos_y(2:end,:)).^2 + (pos_z(2:end,:)).^2 );
-% figure; hold on;
-% plot(pos_x(:,2));
-% plot(pos_y(:,2));
-% plot(pos_z(:,2));
-% figure;plot(r(:,1));
+% plot(pos_x(:,j)); ylim([-100 100]);
+
+r0 = sqrt( (pos_x(1,:)).^2 + (pos_y(1,:)).^2 + (pos_z(1,:)).^2 );
+r = sqrt( (pos_x(2:end,:)).^2 + (pos_y(2:end,:)).^2 + (pos_z(2:end,:)).^2 );
 
 
-% figure; hold on; plot(pos_x(:,1)); plot(my_x);
-% figure; hold on; plot(pos_y(:,1)); plot(my_y);
-% figure; hold on; plot(pos_z(:,1)); plot(my_z);
+
+j = 32; figure;
+subplot(2,2,1); plot(pos_x(:,j)); ylim([-100 100]); legend("x");
+subplot(2,2,2); plot(pos_y(:,j)); ylim([-100 100]); legend("y");
+subplot(2,2,3); plot(pos_z(:,j)); ylim([-100 100]); legend("z");
+subplot(2,2,4); plot(r(:,j-1)); ylim([-100 100]); legend("r");
+
 
 %% Calculate Mean Square Displacement
 msd(1) = 0;
-for k = 2:length(files(i,:))
-    for j = 1:N    
+i=1;
+for k = 2:length(files(i,:))-1
+%     for j = 1:N    
 %         msd(k) = msd(k-1) + ((r(k,j) - r0(j))^2)/N;
-        msd(k) = ((r(k,j) - r0(j))^2)/N;
-    end
+        msd(k) = sum( ((r(k,:) - r0).^2)/N );
+%         fprintf("%d %d\n",k);
+%     end
 end
 % disp(msd/6);
-plot(-msd)
+
+plot(msd/(6*100))
+
+% Literature source for Argon
+% at T = 84 K, 1.53 10e-5 cm^2/sec 
+% https://aip.scitation.org/doi/abs/10.1063/1.1700899
+%
+% at T = 295 K and 42 kPa, 0.423 cm^2/sec
+% https://journals.aps.org/pr/pdf/10.1103/PhysRev.72.1256
+
+
 
 
 
