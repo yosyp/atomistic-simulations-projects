@@ -34,31 +34,122 @@ volume of 24.6 $\frac{cm^3}{mole}$ was $T_{m} = 92 K$. An FCC crystal with
 5.78 A" and simulated at constant volume and temperature $T = 1.5
 T_{m} = 138 K$. 
 
-\begin{equation}
-a = \sqrt[3]{4 \frac{V_m}{Av}} = 5.467 A
-\end{equation}
+#+CAPTION: The FCC crystal was first equilibrated using constant pressure and equal velocity distribution (LFLAG = 1, KFLAG = 2) with periodic boundary conditions at temperature T = 138 K for t = 1 ps. The crystal on the left is the system before equilibration, and after equilibration on the right. Given that the temperature specified is above the melting temperature previously found, it is reasonable that no long range order is found in the system after equilibration and the FCC crystal is not in a solid state. 
+#+NAME: fig:q1-equil
+file:figures/q1-equil.png
 
-#+CAPTION: 
-#+NAME: fig:
-file:figures/q6-quad.png
+#+CAPTION: The FCC crystal after equilibration being heating for t = 100 ps (dt = 0.001 ps) with constant volume and constant temperature (LFLAG = 0, KFLAG = 5) and periodic boundary conditions in all three directions. On the left is the system at t = 0 ps, on the right at t = 100 ps. No qualitative difference is observed between the two system snapshots, and diffusion cannot be estimated since all atoms are of the same type. 
+#+NAME: fig:q1-heating100ps
+file:figures/q1-heating100ps.png
 
 * Question 2
 
-To calculate the mean square displacement 
+The mean squared displacement can be calculated using the average of
+atomic displacements as follows:
+\begin{equation}
+MSD = \Bigg<\Delta \vec{r} (t)^2 \Bigg> \equiv \frac{1}{N} \sum_{i=1}{N}( \vec{r_i}(t) - \vec{r_i}(0))^2
+\end{equation}
+where the periodic boundaries must first be "unwrapped" to obtain the
+true atomic displacements from the simulation. The following algorithm
+(Matlab) was used to unwrap the displacements:
 
-#+CAPTION: 
+\begin{lstlisting}[language=Matlab]
+% "Unwrap" coordinates from periodic boundary simulation
+% This undoes the gather() command that keeps atoms in simulation box
+% Displacement vector is unwrapped instead of individual coordinates
+for j=1:N
+    r_prev = r(1,j); % j-th atom first timestep = true coordinates   
+    gt(1,j) = r(1,j);  % corrected cooridnates (1st timestep = true coordinates)
+    % Loop through time trajectory of j-th atom
+    for k = 2:length(pos_x(:,j))
+        dr = r(k,j) - r_prev;       % displacement between current and previous timestep
+        if dr > .5*box_size         % displacement too far "right"?
+            dr = dr - box_size;     % replace displacement
+        end
+        if dr < -.5*box_size        % displacement too far "left"?
+            dr = dr + box_size;     % replace displacement
+        end
+        gt(k,j) = gt(k-1,j) + dr;
+        r_prev = r(k,j);
+    end
+end
+\end{lstlisting}
+
+Next, using the Einstein relation the diffusion coefficient, D, for $T
+= 1.5T_m$ can be calculate using:
+\begin{equation}
+MSD = \Bigg<\Delta \vec{r} (t)^2 \Bigg> = A + 6Dt + fluctuations
+\end{equation}
+which is a $0^{th}$f-order polynomial fit (linear fit) to the mean
+squared displacement vs time plot which was calculated above. Using
+linear regression, the coefficients can be found as:
+#+CAPTION: Diffusion coefficient and offset as calculated using linear regression of the MSD vs time plot of the atomic displacements in the simulation. 
+| Coefficient   | Value                          | Value                                |
+|---------------+--------------------------------+--------------------------------------|
+| A (offset)    | $20.5493 Angstrom^2$           | $2.0549 \times 10^{-9} m$            |
+| D (diffusion) | $0.9371 \frac{Angstrom^2}{ps}$ | $9.371 \times 10^{-9} \frac{m^2}{s}$ |
+
+However, from the in-class lecture on mobility of atoms and diffusion
+(page 1), the Einstein relation is stated to be suitable for estimated D in MD
+simulations only for sufficiently high temperature, when $D > 10^{12}
+\frac{m^2}{s}$, which seems to be very high and perhaps a typo. 
+
+#+CAPTION: The mean squared displacement vs. time plot as calculated from atomic trajectories compared to their initial positions. A linear fit estimated the diffusion coefficient, D, as the slope of the data. 
 #+NAME: fig:q2msd
 file:figures/q2-msd.png
 
 * Question 3
 
-#+CAPTION: 
+#+CAPTION: The trajectories of three particles are plotted over time with the color of the line corresponding to time (0 ps to 100 ps, brighter = later time). On the left is the projection of the trajectory to a 2D plane, on the right the same trajectories are plotted in 3D view. From the diffusion coefficient ($D = 0.9371 A^{2}/ps$) it is expected that the 2D projection will show an area close to $0.9371 A^{2}/ps \times 100 ps = 93.71 A^{2}$ or $9.68 A$ in each direction (on average). The trajectories on the left closely resemble this behavior, with atomic displacements on average being close to 10 Angstroms in each direction. 
 #+NAME: fig:q2msd
-file:figures/q3-msd3d.png
+file:figures/q3-combined.png
 
-#+CAPTION: 
-#+NAME: fig:q2msd
-file:figures/q2-msd3d.png
+* Question 4
+
+Perform simulation study of self-diffusion for a system shown
+schematically at the bottom of the this page (using the crystal
+generator create an input file that has 4×4×20 FCC unit cells (1280
+atoms) and lattice constant afcc is 5.78 Å. (continued at the next
+page)
+
+Use variable KHIST(I) to define rigid atoms (KHIST(I)=3), atoms of
+ type A (KHIST(I)=0), and atoms of type B (KHIST(I)=1).
+ All atoms are interacting among each other via the same interatomic
+ potential (KTYPE(I)=1 for all atoms).
+ You can think about atoms of type B as isotopes of atoms of type A.
+ Thus, in this simulation you will study self-diffusion of Ar.
+
+Choose parameters in md.input so that you have periodic boundary
+conditions in X and Y directions, and rigid boundaries in Z direction.
+In this simulation use the same temperatures as you used in task
+#1.
+
+Use your knowledge of D (from task #2) to estimate the time of the
+simulation that would give you a significant mixing of atoms A and B.
+
+Explain your choice of the total time of the simulation.
+ Also, use your knowledge of D to estimate an appropriate value for
+ input parameter Ngather (that defines how often you have to gather
+ atoms to the original computational cell).
+ Explain your choice of Ngather.
+
+Plot snapshots of your system (mark atoms A and B in a different way)
+and concentration profiles for atoms of type B for three different
+times during the simulation.
+------
+
+Similar to previous simulations, the assembled crystal was first
+equilibrated by simulation for 1 ps with equal velocity distribution
+is constant pressure (KFLAG = 2, LFLAG = 1) at T = 138 K. Since the
+total simulation time is only 1 ps, the value of Ngather was
+arbitrarily set.
+#+CAPTION: Equilibration of the 4x4x20 FCC crystal (1280 atoms) with $a_{fcc} = 5.78$ Angstrom. Rigid atoms are on the top and bottom with a corresponding rigid boundary condition in the z direction. The inner two types of atoms correspond to Ar and an isotope of Ar, with corresponding periodic boundary conditions in the X and Y direction. The axis of the figure is such that the z-axis is north (up). 
+#+NAME: fig:q4-equil
+file:figures/q4-equil.png
+
+After equilibration, the system was simulation with constant
+temperature and constant volume (KFLAG = 5, LFLAG = 0) at T = 138 K
+for 800 ps with dt = 0.004 ps. 
 
 
 * References

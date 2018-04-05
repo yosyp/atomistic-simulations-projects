@@ -123,5 +123,5 @@ ylabel('y [A]','FontWeight','bold','Color','black');
 zlabel('z [A]','FontWeight','bold','Color','black');
 grid on;  title('Trajectory Projections of Few Atoms (color = time)');
 xt = get(gca, 'XTick'); set(gca, 'FontSize', 16);  set(gca, 'LineWidth', 2);
-
+view(2)
 % saveas(gcf,'figures/q3-msd.png');
