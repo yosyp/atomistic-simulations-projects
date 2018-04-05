@@ -149,7 +149,26 @@ file:figures/q4-equil.png
 
 After equilibration, the system was simulation with constant
 temperature and constant volume (KFLAG = 5, LFLAG = 0) at T = 138 K
-for 800 ps with dt = 0.004 ps. 
+for 800 ps with dt = 0.004 ps. If we consider "significant mixing" to
+be the diffusion of atoms 15 Angstrom into each other, then we can
+predict the simulation time using knowledge of the diffusion
+coefficient as:
+\begin{equation}
+\frac{(2 \times 15 \quad [Angstrom])^2 }{D \quad [Angstrom^2/ps]} = \frac{900 \quad [Angstrom^2]}{0.9371 \quad [A^2/ps]} = \frac{961 \quad [ps]}{0.004 \quad [steps/ps]} = 240250 \quad [steps]
+\end{equation}
+
+Since the Ngather parameter gathers molecules back to the computation
+cell, it is reasonable to perform a gather step when atoms are
+expected to have traveled half of the simulation cell. With rigid boundaries in the z-direction, only the x
+and y directions will require gathering. Using our new knowledge of
+the diffusion coefficient D = 0.9371 $A^{2}/ps$ and the known size of
+the x-y simulation box ($x_{len} = 23.12$ Angstrom both), we can calculated the
+number of simulation steps required for an atom to travel half the box
+distance:
+\begin{equation}
+\frac{1}{D} \Bigg[\frac{ps}{A^2}\Bigg] \times \frac{1}{dt} \Bigg[\frac{steps}{ps}\Bigg] \times \Bigg(\frac{x_{len}}{2}\Bigg)^2 [A^2] = 35650 [steps-per-gather]
+\end{equation}
+
 
 
 * References
