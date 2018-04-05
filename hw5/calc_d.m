@@ -79,8 +79,8 @@ txt1 = '<\Delta r(t)^2> = A + 6Dt';
 txt2 = sprintf('A = %4.4f\nD = %4.4f', p(2), p(1));
 
 figure; hold on;
-plot(0:99, msd, 'LineWidth', 9); ylim([0 15]);
-plot(0:99, f1, 'LineWidth', 5); ylim([0 15]);
+plot(0:99, msd, 'LineWidth', 9); %ylim([0 15]);
+plot(0:99, f1, 'LineWidth', 5); %ylim([0 15]);
 t1 = text(5,14,txt1); t1.FontSize = 20; t1.FontWeight = 'bold';
 t2 = text(5,12,txt2); t2.FontSize = 20; t2.FontWeight = 'bold';
 legend('MSD','Line Fit', 'Location', 'SouthEast');
