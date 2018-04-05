@@ -1,235 +1,414 @@
 Loading a list of files from md.rc
 Loading a simulation setup from md.input
 Berendsen thermostat: T = 138.000000 K, tau = 2.000000 ps
-Berendsen barostat: P = 0.000100 GPa; pressure control XYZ together; beta = 0.100000 GPa^-1
 Building LJ Ar-Ar potential
 sigma = 3.405, epsilon = 0.0103
 Reading equilT138.data
 Starting the simulation
 Number steps: 100000
-Saving every: 2500 steps.
+Saving every: 1000 steps.
 time = 1.00101, Etot = -44.4472, T = 143.993
 Writing nptT138.data
 Saving snapshot to time1001
 Writing data/time1001.d
-time = 2.00101, Etot = -44.9393, T = 136.303
-time = 3.00101, Etot = -44.7056, T = 129.807
+time = 2.00101, Etot = -44.7755, T = 141.716
 Writing nptT138.data
-Saving snapshot to time3501
-Writing data/time3501.d
-time = 4.00101, Etot = -44.141, T = 130.188
-time = 5.00101, Etot = -43.3988, T = 129.269
-time = 6.00101, Etot = -42.6222, T = 132.714
+Saving snapshot to time2001
+Writing data/time2001.d
+time = 3.00101, Etot = -45.004, T = 139.404
+Writing nptT138.data
+Saving snapshot to time3001
+Writing data/time3001.d
+time = 4.00101, Etot = -45.2608, T = 137.803
+Writing nptT138.data
+Saving snapshot to time4001
+Writing data/time4001.d
+time = 5.00101, Etot = -45.4437, T = 140.985
+Writing nptT138.data
+Saving snapshot to time5001
+Writing data/time5001.d
+time = 6.00101, Etot = -45.5211, T = 140.36
 Writing nptT138.data
 Saving snapshot to time6001
 Writing data/time6001.d
-time = 7.00101, Etot = -41.7663, T = 129.091
-time = 8.00101, Etot = -40.9443, T = 126.935
+time = 7.00101, Etot = -45.6309, T = 142.975
 Writing nptT138.data
-Saving snapshot to time8501
-Writing data/time8501.d
-time = 9.00101, Etot = -40.1534, T = 128.895
-time = 10.001, Etot = -39.5074, T = 129.569
-time = 11.001, Etot = -38.7983, T = 132.924
+Saving snapshot to time7001
+Writing data/time7001.d
+time = 8.00101, Etot = -45.5908, T = 136.835
+Writing nptT138.data
+Saving snapshot to time8001
+Writing data/time8001.d
+time = 9.00101, Etot = -45.6705, T = 138.066
+Writing nptT138.data
+Saving snapshot to time9001
+Writing data/time9001.d
+time = 10.001, Etot = -45.6322, T = 139.184
+Writing nptT138.data
+Saving snapshot to time10001
+Writing data/time10001.d
+time = 11.001, Etot = -45.5793, T = 139.563
 Writing nptT138.data
 Saving snapshot to time11001
 Writing data/time11001.d
-time = 12.001, Etot = -38.1348, T = 132.754
-time = 13.001, Etot = -37.5499, T = 132.188
+time = 12.001, Etot = -45.6422, T = 135.722
 Writing nptT138.data
-Saving snapshot to time13501
-Writing data/time13501.d
-time = 14.001, Etot = -37.115, T = 131.598
-time = 15.001, Etot = -36.5487, T = 130.336
-time = 16.001, Etot = -35.9721, T = 133.343
+Saving snapshot to time12001
+Writing data/time12001.d
+time = 13.001, Etot = -45.6374, T = 136.435
+Writing nptT138.data
+Saving snapshot to time13001
+Writing data/time13001.d
+time = 14.001, Etot = -45.6857, T = 139.304
+Writing nptT138.data
+Saving snapshot to time14001
+Writing data/time14001.d
+time = 15.001, Etot = -45.561, T = 135.061
+Writing nptT138.data
+Saving snapshot to time15001
+Writing data/time15001.d
+time = 16.001, Etot = -45.5789, T = 140.485
 Writing nptT138.data
 Saving snapshot to time16001
 Writing data/time16001.d
-time = 17.001, Etot = -35.4509, T = 134.714
-time = 18.001, Etot = -34.908, T = 132.936
+time = 17.001, Etot = -45.6222, T = 137.71
 Writing nptT138.data
-Saving snapshot to time18501
-Writing data/time18501.d
-time = 19.001, Etot = -34.4658, T = 132.168
-time = 20.001, Etot = -33.9301, T = 134.867
-time = 21.001, Etot = -33.4905, T = 135.446
+Saving snapshot to time17001
+Writing data/time17001.d
+time = 18.001, Etot = -45.6347, T = 141.11
+Writing nptT138.data
+Saving snapshot to time18001
+Writing data/time18001.d
+time = 19.001, Etot = -45.655, T = 135.419
+Writing nptT138.data
+Saving snapshot to time19001
+Writing data/time19001.d
+time = 20.001, Etot = -45.7452, T = 136.426
+Writing nptT138.data
+Saving snapshot to time20001
+Writing data/time20001.d
+time = 21.001, Etot = -45.7595, T = 140.619
 Writing nptT138.data
 Saving snapshot to time21001
 Writing data/time21001.d
-time = 22.001, Etot = -33.151, T = 134.282
-time = 23.001, Etot = -32.7895, T = 136.407
+time = 22.001, Etot = -45.7982, T = 139.236
 Writing nptT138.data
-Saving snapshot to time23501
-Writing data/time23501.d
-time = 24.001, Etot = -32.4804, T = 135.973
-time = 25.001, Etot = -32.1844, T = 133.374
-time = 26.001, Etot = -31.8524, T = 133.888
+Saving snapshot to time22001
+Writing data/time22001.d
+time = 23.001, Etot = -45.7925, T = 136.489
+Writing nptT138.data
+Saving snapshot to time23001
+Writing data/time23001.d
+time = 24.001, Etot = -45.7488, T = 136.165
+Writing nptT138.data
+Saving snapshot to time24001
+Writing data/time24001.d
+time = 25.001, Etot = -45.6723, T = 137.571
+Writing nptT138.data
+Saving snapshot to time25001
+Writing data/time25001.d
+time = 26.001, Etot = -45.674, T = 136.299
 Writing nptT138.data
 Saving snapshot to time26001
 Writing data/time26001.d
-time = 27.001, Etot = -31.4898, T = 136.321
-time = 28.001, Etot = -31.1983, T = 135.173
+time = 27.001, Etot = -45.6709, T = 138.157
 Writing nptT138.data
-Saving snapshot to time28501
-Writing data/time28501.d
-time = 29.001, Etot = -30.8874, T = 134.413
-time = 30.001, Etot = -30.6769, T = 135.735
-time = 31.001, Etot = -30.4706, T = 135.761
+Saving snapshot to time27001
+Writing data/time27001.d
+time = 28.001, Etot = -45.6336, T = 136.117
+Writing nptT138.data
+Saving snapshot to time28001
+Writing data/time28001.d
+time = 29.001, Etot = -45.6749, T = 141.184
+Writing nptT138.data
+Saving snapshot to time29001
+Writing data/time29001.d
+time = 30.001, Etot = -45.6519, T = 137.941
+Writing nptT138.data
+Saving snapshot to time30001
+Writing data/time30001.d
+time = 31.001, Etot = -45.6523, T = 138.564
 Writing nptT138.data
 Saving snapshot to time31001
 Writing data/time31001.d
-time = 32.001, Etot = -30.2072, T = 134.775
-time = 33.001, Etot = -29.9957, T = 134.988
+time = 32.001, Etot = -45.6933, T = 133.453
 Writing nptT138.data
-Saving snapshot to time33501
-Writing data/time33501.d
-time = 34.001, Etot = -29.6688, T = 134.946
-time = 35.001, Etot = -29.3622, T = 135.189
-time = 36.001, Etot = -29.0265, T = 134.77
+Saving snapshot to time32001
+Writing data/time32001.d
+time = 33.001, Etot = -45.7623, T = 137.78
+Writing nptT138.data
+Saving snapshot to time33001
+Writing data/time33001.d
+time = 34.001, Etot = -45.7218, T = 134.728
+Writing nptT138.data
+Saving snapshot to time34001
+Writing data/time34001.d
+time = 35.001, Etot = -45.7035, T = 140.04
+Writing nptT138.data
+Saving snapshot to time35001
+Writing data/time35001.d
+time = 36.001, Etot = -45.6915, T = 137.725
 Writing nptT138.data
 Saving snapshot to time36001
 Writing data/time36001.d
-time = 37.001, Etot = -28.8031, T = 134.288
-time = 38.001, Etot = -28.5518, T = 135.114
+time = 37.001, Etot = -45.6337, T = 138.867
 Writing nptT138.data
-Saving snapshot to time38501
-Writing data/time38501.d
-time = 39.001, Etot = -28.2583, T = 136.489
-time = 40.001, Etot = -28.0941, T = 137.75
-time = 41.001, Etot = -27.9727, T = 136.962
+Saving snapshot to time37001
+Writing data/time37001.d
+time = 38.001, Etot = -45.6085, T = 136.473
+Writing nptT138.data
+Saving snapshot to time38001
+Writing data/time38001.d
+time = 39.001, Etot = -45.6127, T = 132.327
+Writing nptT138.data
+Saving snapshot to time39001
+Writing data/time39001.d
+time = 40.001, Etot = -45.6514, T = 137.648
+Writing nptT138.data
+Saving snapshot to time40001
+Writing data/time40001.d
+time = 41.001, Etot = -45.6122, T = 138.963
 Writing nptT138.data
 Saving snapshot to time41001
 Writing data/time41001.d
-time = 42.001, Etot = -27.7347, T = 137.495
-time = 43.001, Etot = -27.4194, T = 135.578
+time = 42.001, Etot = -45.6531, T = 137.389
 Writing nptT138.data
-Saving snapshot to time43501
-Writing data/time43501.d
-time = 44.001, Etot = -27.1208, T = 135.267
-time = 45.001, Etot = -26.9236, T = 137.239
-time = 46.001, Etot = -26.6633, T = 134.755
+Saving snapshot to time42001
+Writing data/time42001.d
+time = 43.001, Etot = -45.6692, T = 136.749
+Writing nptT138.data
+Saving snapshot to time43001
+Writing data/time43001.d
+time = 44.001, Etot = -45.6548, T = 140.425
+Writing nptT138.data
+Saving snapshot to time44001
+Writing data/time44001.d
+time = 45.001, Etot = -45.6154, T = 140.716
+Writing nptT138.data
+Saving snapshot to time45001
+Writing data/time45001.d
+time = 46.001, Etot = -45.6946, T = 137.272
 Writing nptT138.data
 Saving snapshot to time46001
 Writing data/time46001.d
-time = 47.001, Etot = -26.5553, T = 135.196
-time = 48.001, Etot = -26.4254, T = 137.994
+time = 47.001, Etot = -45.6759, T = 137.887
 Writing nptT138.data
-Saving snapshot to time48501
-Writing data/time48501.d
-time = 49.001, Etot = -26.2658, T = 135.187
-time = 50.001, Etot = -26.1456, T = 137.13
-time = 51.001, Etot = -25.9518, T = 135.721
+Saving snapshot to time47001
+Writing data/time47001.d
+time = 48.001, Etot = -45.6814, T = 133.782
+Writing nptT138.data
+Saving snapshot to time48001
+Writing data/time48001.d
+time = 49.001, Etot = -45.6905, T = 139.057
+Writing nptT138.data
+Saving snapshot to time49001
+Writing data/time49001.d
+time = 50.001, Etot = -45.7753, T = 139.459
+Writing nptT138.data
+Saving snapshot to time50001
+Writing data/time50001.d
+time = 51.001, Etot = -45.7138, T = 138.808
 Writing nptT138.data
 Saving snapshot to time51001
 Writing data/time51001.d
-time = 52.001, Etot = -25.7915, T = 137.625
-time = 53.001, Etot = -25.6101, T = 136.376
+time = 52.001, Etot = -45.7865, T = 136.833
 Writing nptT138.data
-Saving snapshot to time53501
-Writing data/time53501.d
-time = 54.001, Etot = -25.533, T = 138.471
-time = 55.001, Etot = -25.4496, T = 134.863
-time = 56.001, Etot = -25.2625, T = 137.744
+Saving snapshot to time52001
+Writing data/time52001.d
+time = 53.001, Etot = -45.7373, T = 139.201
+Writing nptT138.data
+Saving snapshot to time53001
+Writing data/time53001.d
+time = 54.001, Etot = -45.7961, T = 137.836
+Writing nptT138.data
+Saving snapshot to time54001
+Writing data/time54001.d
+time = 55.001, Etot = -45.7577, T = 134.736
+Writing nptT138.data
+Saving snapshot to time55001
+Writing data/time55001.d
+time = 56.001, Etot = -45.6705, T = 135.03
 Writing nptT138.data
 Saving snapshot to time56001
 Writing data/time56001.d
-time = 57.001, Etot = -24.96, T = 135.932
-time = 58.001, Etot = -24.8293, T = 136.879
+time = 57.001, Etot = -45.6805, T = 139.973
 Writing nptT138.data
-Saving snapshot to time58501
-Writing data/time58501.d
-time = 59.001, Etot = -24.745, T = 136.197
-time = 60.001, Etot = -24.7179, T = 135.466
-time = 61.001, Etot = -24.613, T = 138.268
+Saving snapshot to time57001
+Writing data/time57001.d
+time = 58.001, Etot = -45.6702, T = 137.999
+Writing nptT138.data
+Saving snapshot to time58001
+Writing data/time58001.d
+time = 59.001, Etot = -45.6925, T = 138.487
+Writing nptT138.data
+Saving snapshot to time59001
+Writing data/time59001.d
+time = 60.001, Etot = -45.7419, T = 136.018
+Writing nptT138.data
+Saving snapshot to time60001
+Writing data/time60001.d
+time = 61.001, Etot = -45.6376, T = 138.539
 Writing nptT138.data
 Saving snapshot to time61001
 Writing data/time61001.d
-time = 62.001, Etot = -24.5108, T = 137.218
-time = 63.001, Etot = -24.3377, T = 135.616
+time = 62.001, Etot = -45.7331, T = 139.418
 Writing nptT138.data
-Saving snapshot to time63501
-Writing data/time63501.d
-time = 64.001, Etot = -24.0613, T = 135.563
-time = 65.001, Etot = -23.8575, T = 134.02
-time = 66.001, Etot = -23.6872, T = 135.26
+Saving snapshot to time62001
+Writing data/time62001.d
+time = 63.001, Etot = -45.7435, T = 137.021
+Writing nptT138.data
+Saving snapshot to time63001
+Writing data/time63001.d
+time = 64.001, Etot = -45.803, T = 141.447
+Writing nptT138.data
+Saving snapshot to time64001
+Writing data/time64001.d
+time = 65.001, Etot = -45.8179, T = 136.308
+Writing nptT138.data
+Saving snapshot to time65001
+Writing data/time65001.d
+time = 66.001, Etot = -45.8048, T = 137.4
 Writing nptT138.data
 Saving snapshot to time66001
 Writing data/time66001.d
-time = 67.001, Etot = -23.568, T = 136.494
-time = 68.001, Etot = -23.4814, T = 137.88
+time = 67.001, Etot = -45.6964, T = 139.656
 Writing nptT138.data
-Saving snapshot to time68501
-Writing data/time68501.d
-time = 69.001, Etot = -23.4051, T = 135.741
-time = 70.001, Etot = -23.2568, T = 134.787
-time = 71.001, Etot = -23.0693, T = 134.648
+Saving snapshot to time67001
+Writing data/time67001.d
+time = 68.001, Etot = -45.7235, T = 138.094
+Writing nptT138.data
+Saving snapshot to time68001
+Writing data/time68001.d
+time = 69.001, Etot = -45.7648, T = 138.949
+Writing nptT138.data
+Saving snapshot to time69001
+Writing data/time69001.d
+time = 70.001, Etot = -45.8075, T = 137.564
+Writing nptT138.data
+Saving snapshot to time70001
+Writing data/time70001.d
+time = 71.001, Etot = -45.7423, T = 137.793
 Writing nptT138.data
 Saving snapshot to time71001
 Writing data/time71001.d
-time = 72.001, Etot = -22.8238, T = 134.81
-time = 73.001, Etot = -22.614, T = 135.086
+time = 72.001, Etot = -45.7228, T = 139.889
 Writing nptT138.data
-Saving snapshot to time73501
-Writing data/time73501.d
-time = 74.001, Etot = -22.5474, T = 137.904
-time = 75.001, Etot = -22.452, T = 138.543
-time = 76.001, Etot = -22.4518, T = 136.987
+Saving snapshot to time72001
+Writing data/time72001.d
+time = 73.001, Etot = -45.6892, T = 135.326
+Writing nptT138.data
+Saving snapshot to time73001
+Writing data/time73001.d
+time = 74.001, Etot = -45.706, T = 142.375
+Writing nptT138.data
+Saving snapshot to time74001
+Writing data/time74001.d
+time = 75.001, Etot = -45.6556, T = 137.379
+Writing nptT138.data
+Saving snapshot to time75001
+Writing data/time75001.d
+time = 76.001, Etot = -45.6535, T = 139.012
 Writing nptT138.data
 Saving snapshot to time76001
 Writing data/time76001.d
-time = 77.001, Etot = -22.425, T = 137.383
-time = 78.001, Etot = -22.3792, T = 138.45
+time = 77.001, Etot = -45.6954, T = 139.836
 Writing nptT138.data
-Saving snapshot to time78501
-Writing data/time78501.d
-time = 79.001, Etot = -22.4117, T = 137.819
-time = 80.001, Etot = -22.3335, T = 137.471
-time = 81.001, Etot = -22.2801, T = 137.93
+Saving snapshot to time77001
+Writing data/time77001.d
+time = 78.001, Etot = -45.697, T = 137.643
+Writing nptT138.data
+Saving snapshot to time78001
+Writing data/time78001.d
+time = 79.001, Etot = -45.6977, T = 139.657
+Writing nptT138.data
+Saving snapshot to time79001
+Writing data/time79001.d
+time = 80.001, Etot = -45.6599, T = 138.423
+Writing nptT138.data
+Saving snapshot to time80001
+Writing data/time80001.d
+time = 81.001, Etot = -45.6896, T = 138.475
 Writing nptT138.data
 Saving snapshot to time81001
 Writing data/time81001.d
-time = 82.001, Etot = -22.2113, T = 138.395
-time = 83.001, Etot = -22.1973, T = 137.839
+time = 82.001, Etot = -45.6328, T = 136.192
 Writing nptT138.data
-Saving snapshot to time83501
-Writing data/time83501.d
-time = 84.001, Etot = -22.1254, T = 137.288
-time = 85.001, Etot = -21.9893, T = 140.32
-time = 86.001, Etot = -21.8223, T = 135.972
+Saving snapshot to time82001
+Writing data/time82001.d
+time = 83.001, Etot = -45.555, T = 140.329
+Writing nptT138.data
+Saving snapshot to time83001
+Writing data/time83001.d
+time = 84.001, Etot = -45.56, T = 135.966
+Writing nptT138.data
+Saving snapshot to time84001
+Writing data/time84001.d
+time = 85.001, Etot = -45.5696, T = 138.646
+Writing nptT138.data
+Saving snapshot to time85001
+Writing data/time85001.d
+time = 86.001, Etot = -45.7038, T = 138.52
 Writing nptT138.data
 Saving snapshot to time86001
 Writing data/time86001.d
-time = 87.001, Etot = -21.6956, T = 136.53
-time = 88.001, Etot = -21.5029, T = 134.134
+time = 87.001, Etot = -45.6979, T = 136.519
 Writing nptT138.data
-Saving snapshot to time88501
-Writing data/time88501.d
-time = 89.001, Etot = -21.4034, T = 137.428
-time = 90.001, Etot = -21.3792, T = 136.244
-time = 91.001, Etot = -21.36, T = 138.382
+Saving snapshot to time87001
+Writing data/time87001.d
+time = 88.001, Etot = -45.7239, T = 143.076
+Writing nptT138.data
+Saving snapshot to time88001
+Writing data/time88001.d
+time = 89.001, Etot = -45.747, T = 138.313
+Writing nptT138.data
+Saving snapshot to time89001
+Writing data/time89001.d
+time = 90.001, Etot = -45.7124, T = 138.996
+Writing nptT138.data
+Saving snapshot to time90001
+Writing data/time90001.d
+time = 91.001, Etot = -45.7175, T = 137.877
 Writing nptT138.data
 Saving snapshot to time91001
 Writing data/time91001.d
-time = 92.001, Etot = -21.4079, T = 137.846
-time = 93.001, Etot = -21.3505, T = 137.442
+time = 92.001, Etot = -45.7816, T = 134.712
 Writing nptT138.data
-Saving snapshot to time93501
-Writing data/time93501.d
-time = 94.001, Etot = -21.1403, T = 134.604
-time = 95.001, Etot = -20.9062, T = 135.481
-time = 96.001, Etot = -20.7935, T = 136.675
+Saving snapshot to time92001
+Writing data/time92001.d
+time = 93.001, Etot = -45.7503, T = 139.265
+Writing nptT138.data
+Saving snapshot to time93001
+Writing data/time93001.d
+time = 94.001, Etot = -45.5982, T = 136.346
+Writing nptT138.data
+Saving snapshot to time94001
+Writing data/time94001.d
+time = 95.001, Etot = -45.5941, T = 138.564
+Writing nptT138.data
+Saving snapshot to time95001
+Writing data/time95001.d
+time = 96.001, Etot = -45.6443, T = 139.207
 Writing nptT138.data
 Saving snapshot to time96001
 Writing data/time96001.d
-time = 97.001, Etot = -20.6191, T = 135.279
-time = 98.001, Etot = -20.5211, T = 137.398
+time = 97.001, Etot = -45.7238, T = 137.274
 Writing nptT138.data
-Saving snapshot to time98501
-Writing data/time98501.d
-time = 99.001, Etot = -20.4507, T = 136.085
-time = 100.001, Etot = -20.3625, T = 137.042
-time = 101.001, Etot = -20.2455, T = 137.285
+Saving snapshot to time97001
+Writing data/time97001.d
+time = 98.001, Etot = -45.6658, T = 138.18
+Writing nptT138.data
+Saving snapshot to time98001
+Writing data/time98001.d
+time = 99.001, Etot = -45.6365, T = 140.729
+Writing nptT138.data
+Saving snapshot to time99001
+Writing data/time99001.d
+time = 100.001, Etot = -45.6893, T = 140.127
 Writing nptT138.data
 Saving snapshot to time
 Writing data/time.d
-Runtime: 175.572 s
+time = 101.001, Etot = -45.6255, T = 138.29
+Writing nptT138.data
+Saving snapshot to time
+Writing data/time.d
+Runtime: 246.904 s
