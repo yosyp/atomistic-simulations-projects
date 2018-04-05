@@ -41,6 +41,7 @@ for k = 1:length(files(i,:))
     end
 end
 
+
 for j=1:N
     r_prev = r(1,j); % j-th atom first timestep = true coordinates   
     gt(1,j) = r(1,j);  % corrected cooridnates (1st timestep = true coordinates)
@@ -58,7 +59,9 @@ for j=1:N
     end
 end
 
-% Plot Single Particle projection
+% "Unwrap" coordinates from periodic boundary simulation
+% This undoes the gather() command that keeps atoms in simulation box
+% All three coordinates are unwrapped separately to 3D plot
 for j=1:N
     prev_x = pos_x(1,j);
     prev_y = pos_y(1,j);
@@ -96,6 +99,7 @@ for j=1:N
     end
 end
 
+% Plot Single Particle projection
 % Pick atom # to plot:
 k = 123;
 
@@ -117,7 +121,7 @@ zlim([0 box_size]);
 xlabel('x [A]','FontWeight','bold','Color','black');
 ylabel('y [A]','FontWeight','bold','Color','black');
 zlabel('z [A]','FontWeight','bold','Color','black');
-grid on;  title('Trajectory Projection of Single Atom');
+grid on;  title('Trajectory Projections of Few Atoms (color = time)');
 xt = get(gca, 'XTick'); set(gca, 'FontSize', 16);  set(gca, 'LineWidth', 2);
-% saveas(gcf,'figures/q3-msd.png');
 
+% saveas(gcf,'figures/q3-msd.png');

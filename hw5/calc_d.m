@@ -44,6 +44,9 @@ for k = 1:length(files(i,:))
     end
 end
 
+% "Unwrap" coordinates from periodic boundary simulation
+% This undoes the gather() command that keeps atoms in simulation box
+% Displacement vector is unwrapped instead of individual coordinates
 for j=1:N
     r_prev = r(1,j); % j-th atom first timestep = true coordinates   
     gt(1,j) = r(1,j);  % corrected cooridnates (1st timestep = true coordinates)
@@ -76,10 +79,10 @@ txt1 = '<\Delta r(t)^2> = A + 6Dt';
 txt2 = sprintf('A = %4.4f\nD = %4.4f', p(2), p(1));
 
 figure; hold on;
-plot(0:99, msd, 'LineWidth', 9); ylim([0 250]);
-plot(0:99, f1, 'LineWidth', 5); ylim([0 250]);
-t1 = text(5,200,txt1); t1.FontSize = 20; t1.FontWeight = 'bold';
-t2 = text(5,170,txt2); t2.FontSize = 20; t2.FontWeight = 'bold';
+plot(0:99, msd, 'LineWidth', 9); ylim([0 150]);
+plot(0:99, f1, 'LineWidth', 5); ylim([0 150]);
+t1 = text(5,140,txt1); t1.FontSize = 20; t1.FontWeight = 'bold';
+t2 = text(5,120,txt2); t2.FontSize = 20; t2.FontWeight = 'bold';
 legend('MSD','Line Fit', 'Location', 'SouthEast');
 xlabel('Time [picosecond]','FontWeight','bold','Color','black');
 ylabel('Mean Squared Displacement [Angstrom^2]','FontWeight','bold','Color','black');
