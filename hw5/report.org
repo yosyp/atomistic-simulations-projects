@@ -15,19 +15,51 @@
 #+DATE: March 22, 2018
 
 * Question 1
+Using the same FCC crystal that you used in homework #4 (7×7×7 unit
+ cells), but build it with the lattice parameter afcc = 5.78 Å that is
+ based on the experimental molar volume of liquid Ar at the melting
+ temperature and 1 atm pressure.
+
+ Perform a simulation at constant volume and temperature T = 1.5Tm,
+ where Tm is the melting you found in homework #4.
+
+ Run the simulations for a time sufficient to collect data for the
+ calculation of the diffusion coefficient.
+
+
+
 From HW#4 the melting temperature of Ar at pressure of 1 atm and molar
 volume of 24.6 $\frac{cm^3}{mole}$ was $T_{m} = 92 K$. An FCC crystal with
 7x7x7 unite cells was constructed with lattice parameter $a_{fcc} =
 5.78 A" and simulated at constant volume and temperature $T = 1.5
 T_{m} = 138 K$. 
 
- \begin{equation}
+\begin{equation}
 a = \sqrt[3]{4 \frac{V_m}{Av}} = 5.467 A
 \end{equation}
 
 #+CAPTION: 
 #+NAME: fig:
 file:figures/q6-quad.png
+
+* Question 2
+
+To calculate the mean square displacement 
+
+#+CAPTION: 
+#+NAME: fig:q2msd
+file:figures/q2-msd.png
+
+* Question 3
+
+#+CAPTION: 
+#+NAME: fig:q2msd
+file:figures/q3-msd3d.png
+
+#+CAPTION: 
+#+NAME: fig:q2msd
+file:figures/q2-msd3d.png
+
 
 * References
 1. The argon melting curve to very high pressures. C-S. Zha, R. Boehler, D. A. Young, M. Ross. The Journal of Chemical Physics 85, 1034 (1986)

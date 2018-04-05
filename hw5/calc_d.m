@@ -70,7 +70,7 @@ i=1; % All files from only this simulation run (see directories variable)
 for k = 1:length(files(i,:))
         msd(k) = sum( ((gt(k,:) - gt(1,:)).^2)/N );
 end
-msd = msd./6;
+msd = msd./(6*100);
 
 p = polyfit(1:100,msd(1:end),1);
 f1 = polyval(p,1:100);
@@ -79,10 +79,10 @@ txt1 = '<\Delta r(t)^2> = A + 6Dt';
 txt2 = sprintf('A = %4.4f\nD = %4.4f', p(2), p(1));
 
 figure; hold on;
-plot(0:99, msd, 'LineWidth', 9); ylim([0 150]);
-plot(0:99, f1, 'LineWidth', 5); ylim([0 150]);
-t1 = text(5,140,txt1); t1.FontSize = 20; t1.FontWeight = 'bold';
-t2 = text(5,120,txt2); t2.FontSize = 20; t2.FontWeight = 'bold';
+plot(0:99, msd, 'LineWidth', 9); ylim([0 15]);
+plot(0:99, f1, 'LineWidth', 5); ylim([0 15]);
+t1 = text(5,14,txt1); t1.FontSize = 20; t1.FontWeight = 'bold';
+t2 = text(5,12,txt2); t2.FontSize = 20; t2.FontWeight = 'bold';
 legend('MSD','Line Fit', 'Location', 'SouthEast');
 xlabel('Time [picosecond]','FontWeight','bold','Color','black');
 ylabel('Mean Squared Displacement [Angstrom^2]','FontWeight','bold','Color','black');

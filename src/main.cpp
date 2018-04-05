@@ -100,7 +100,7 @@ int main(int argc, char *argv[]) {
       Writer_Data writer(setup.get_output());
       writer.save(system); // write a file for restarting
 
-      int time = static_cast<int>(system.time*1000);
+      int time = static_cast<int>(system.time);
       //      std::string filename =
       //          setup.get_output_dir() + "/time" + step_to_str(time) + ".d";
       std::string filename =
