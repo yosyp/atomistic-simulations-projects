@@ -61,9 +61,9 @@ for j=1:N
     end
 end
 
-%% Calculate Mean Square Displacement
+% Calculate Mean Square Displacement
 msd(1) = 0;
-i=1;
+i=1; % All files from only this simulation run (see directories variable)
 for k = 1:length(files(i,:))
         msd(k) = sum( ((gt(k,:) - gt(1,:)).^2)/N );
 end
@@ -83,79 +83,7 @@ t2 = text(5,170,txt2); t2.FontSize = 20; t2.FontWeight = 'bold';
 legend('MSD','Line Fit', 'Location', 'SouthEast');
 xlabel('Time [picosecond]','FontWeight','bold','Color','black');
 ylabel('Mean Squared Displacement [Angstrom^2]','FontWeight','bold','Color','black');
-    grid on; grid minor; title('Mean Squared Displacement');
-    xt = get(gca, 'XTick'); set(gca, 'FontSize', 16);  set(gca, 'LineWidth', 2);
-    
-% Literature source for Argon
-% at T = 84 K, 1.53 10e-5 cm^2/sec 
-% https://aip.scitation.org/doi/abs/10.1063/1.1700899
-%
-% at T = 295 K and 42 kPa, 0.423 cm^2/sec
-% https://journals.aps.org/pr/pdf/10.1103/PhysRev.72.1256
-
-% at T = K and 87 kPa, 2.07 10e-5 cm^2/sec
-
-% Unit conversion:
-% 1 Angstrom^2/ps = 10e-4 cm^2/sec = 10e-8 m^2/s
-
-%% Plot Single Particle projection
-for j=1:N
-    prev_x = pos_x(1,j);
-    prev_y = pos_y(1,j);
-    prev_z = pos_z(1,j);
-    new_x(1,j) = prev_x;
-    new_y(1,j) = prev_y;
-    new_z(1,j) = prev_z;
-    for i=2:length(pos_x(:,j))
-       dx = pos_x(i,j) - prev_x;
-       if dx > .5*box_size
-           dx = dx - box_size;
-       elseif dx < -.5*box_size
-           dx = dx + box_size;
-       end
-       new_x(i,j) = new_x(i-1,j) + dx;
-       prev_x = pos_x(i,j);
-
-       dy = pos_y(i,j) - prev_y;
-       if dy > .5*box_size
-           dy = dy - box_size;
-       elseif dy < -.5*box_size
-           dy = dy + box_size;
-       end
-       new_y(i,j) = new_y(i-1,j) + dy;
-       prev_y = pos_y(i,j);   
-
-       dz = pos_z(i,j) - prev_z;
-       if dz > .5*box_size
-           dz = dz - box_size;
-       elseif dz < -.5*box_size
-           dz = dz + box_size;
-       end
-       new_z(i,j) = new_z(i-1,j) + dz;
-       prev_z = pos_z(i,j);     
-    end
-end
-
-figure; hold on;
-
-k = 123;
-cmap = colormap; c = 1:length(new_x(:,k));
-% change c into an index into the colormap
-% min(c) -> 1, max(c) -> number of colors
-c = round(1+(size(cmap,1)-1)*(c - min(c))/(max(c)-min(c)));
-% make a blank plot
-plot3(new_x(:,k),new_y(:,k),new_z(:,k),'linestyle','none')
-% add line segments
-for j = 1:(length(new_x(:,k))-1)
-    line(new_x(j:j+1,k),new_y(j:j+1,k),new_z(j:j+1,k),'color',cmap(c(j),:),'LineWidth', 3)
-end
-colorbar; grid on;
-xlim([0 box_size]);
-ylim([0 box_size]);
-zlim([0 box_size]);
-xlabel('x [A]','FontWeight','bold','Color','black');
-ylabel('y [A]','FontWeight','bold','Color','black');
-zlabel('z [A]','FontWeight','bold','Color','black');
-    grid on;  title('Mean Squared Displacement');
-    xt = get(gca, 'XTick'); set(gca, 'FontSize', 16);  set(gca, 'LineWidth', 2);
-
+grid on; grid minor; title('Mean Squared Displacement');
+xt = get(gca, 'XTick'); set(gca, 'FontSize', 16);  set(gca, 'LineWidth', 2);
+% saveas(gcf,'figures/q2-msd.png');
+   
