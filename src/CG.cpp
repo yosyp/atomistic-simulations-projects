@@ -22,7 +22,7 @@ int main() {
   cg.load(system);  // generate system (in the MD code, you also can generate system instead of loading a file)
   for (auto& particle : system.particles) {					//defining the rigid layers and "isotopes" for diffusion simulation (Homework #5)
   	if (particle.pos.z > system.Zcenter) particle.khist = 1;
-	if ((particle.pos.z < (a_lat + 0.01)) || (particle.pos.z > (system.XL - a_lat - 0.01))) particle.khist = 3;
+	if ((particle.pos.z < (a_lat + 0.01)) || (particle.pos.z > (system.ZL - a_lat - 0.01))) particle.khist = 3;
   }
   writer.save(system);                   // save system to a file
                                          // write .d snapshot to versify if system is generated correctly

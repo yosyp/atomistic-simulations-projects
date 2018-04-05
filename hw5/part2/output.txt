@@ -3,412 +3,362 @@ Loading a simulation setup from md.input
 Berendsen thermostat: T = 138.000000 K, tau = 2.000000 ps
 Building LJ Ar-Ar potential
 sigma = 3.405, epsilon = 0.0103
-Reading ArHW52.data
+Reading equilpart2.data
 Starting the simulation
-Number steps: 100000
-Saving every: 1000 steps.
-time = 0.001, Etot = -84.5519, T = 3.71419e-34
-Writing part2.data
-Saving snapshot to time001
-Writing data/time001.d
-time = 1.001, Etot = -83.5252, T = 38.7894
-Writing part2.data
-Saving snapshot to time1001
-Writing data/time1001.d
-time = 2.001, Etot = -82.7689, T = 58.9016
-Writing part2.data
-Saving snapshot to time2000
-Writing data/time2000.d
-time = 3.001, Etot = -82.2293, T = 74.7229
-Writing part2.data
-Saving snapshot to time3000
-Writing data/time3000.d
-time = 4.001, Etot = -81.8339, T = 95.213
-Writing part2.data
-Saving snapshot to time4000
-Writing data/time4000.d
-time = 5.001, Etot = -81.503, T = 101.503
-Writing part2.data
-Saving snapshot to time5001
-Writing data/time5001.d
-time = 6.001, Etot = -81.2672, T = 112.508
-Writing part2.data
-Saving snapshot to time6001
-Writing data/time6001.d
-time = 7.001, Etot = -81.0776, T = 128.468
-Writing part2.data
-Saving snapshot to time7001
-Writing data/time7001.d
-time = 8.001, Etot = -80.9691, T = 128.309
-Writing part2.data
-Saving snapshot to time8001
-Writing data/time8001.d
-time = 9.001, Etot = -80.9014, T = 130.904
-Writing part2.data
-Saving snapshot to time9001
-Writing data/time9001.d
-time = 10.001, Etot = -80.8325, T = 113.276
-Writing part2.data
-Saving snapshot to time10000
-Writing data/time10000.d
-time = 11.001, Etot = -80.7583, T = 137.053
-Writing part2.data
-Saving snapshot to time11000
-Writing data/time11000.d
-time = 12.001, Etot = -80.7314, T = 140.075
-Writing part2.data
-Saving snapshot to time12000
-Writing data/time12000.d
-time = 13.001, Etot = -80.6656, T = 128.176
-Writing part2.data
-Saving snapshot to time13000
-Writing data/time13000.d
-time = 14.001, Etot = -80.6221, T = 134.381
-Writing part2.data
-Saving snapshot to time14000
-Writing data/time14000.d
-time = 15.001, Etot = -80.6165, T = 138.883
-Writing part2.data
-Saving snapshot to time15000
-Writing data/time15000.d
-time = 16.001, Etot = -80.584, T = 139.048
-Writing part2.data
-Saving snapshot to time16000
-Writing data/time16000.d
-time = 17.001, Etot = -80.5257, T = 130.068
-Writing part2.data
-Saving snapshot to time17000
-Writing data/time17000.d
-time = 18.001, Etot = -80.4779, T = 128.619
-Writing part2.data
-Saving snapshot to time18000
-Writing data/time18000.d
-time = 19.001, Etot = -80.4473, T = 144.88
-Writing part2.data
-Saving snapshot to time19001
-Writing data/time19001.d
-time = 20.001, Etot = -80.4426, T = 138.932
-Writing part2.data
-Saving snapshot to time20001
-Writing data/time20001.d
-time = 21.001, Etot = -80.4198, T = 130.003
-Writing part2.data
-Saving snapshot to time21001
-Writing data/time21001.d
-time = 22.001, Etot = -80.4372, T = 129.795
-Writing part2.data
-Saving snapshot to time22001
-Writing data/time22001.d
-time = 23.001, Etot = -80.4066, T = 135.346
-Writing part2.data
-Saving snapshot to time23001
-Writing data/time23001.d
-time = 24.001, Etot = -80.4236, T = 147.025
-Writing part2.data
-Saving snapshot to time24001
-Writing data/time24001.d
-time = 25.001, Etot = -80.433, T = 141.935
-Writing part2.data
-Saving snapshot to time25001
-Writing data/time25001.d
-time = 26.001, Etot = -80.4148, T = 133.725
-Writing part2.data
-Saving snapshot to time26001
-Writing data/time26001.d
-time = 27.001, Etot = -80.4302, T = 138.766
-Writing part2.data
-Saving snapshot to time27001
-Writing data/time27001.d
-time = 28.001, Etot = -80.4245, T = 129.142
-Writing part2.data
-Saving snapshot to time28001
-Writing data/time28001.d
-time = 29.001, Etot = -80.4032, T = 142.77
-Writing part2.data
-Saving snapshot to time29001
-Writing data/time29001.d
-time = 30.001, Etot = -80.4527, T = 144.953
-Writing part2.data
-Saving snapshot to time30001
-Writing data/time30001.d
-time = 31.001, Etot = -80.438, T = 133.55
-Writing part2.data
-Saving snapshot to time31001
-Writing data/time31001.d
-time = 32.001, Etot = -80.4528, T = 141.728
-Writing part2.data
-Saving snapshot to time32001
-Writing data/time32001.d
-time = 33.001, Etot = -80.4472, T = 145.522
-Writing part2.data
-Saving snapshot to time33001
-Writing data/time33001.d
-time = 34.001, Etot = -80.4318, T = 142.22
-Writing part2.data
-Saving snapshot to time34001
-Writing data/time34001.d
-time = 35.001, Etot = -80.4839, T = 142.42
-Writing part2.data
-Saving snapshot to time35001
-Writing data/time35001.d
-time = 36.001, Etot = -80.4589, T = 135.178
-Writing part2.data
-Saving snapshot to time36001
-Writing data/time36001.d
-time = 37.001, Etot = -80.4415, T = 133.165
-Writing part2.data
-Saving snapshot to time37001
-Writing data/time37001.d
-time = 38.001, Etot = -80.403, T = 133.737
-Writing part2.data
-Saving snapshot to time38001
-Writing data/time38001.d
-time = 39.001, Etot = -80.348, T = 126.247
-Writing part2.data
-Saving snapshot to time39000
-Writing data/time39000.d
-time = 40.001, Etot = -80.3567, T = 140.876
-Writing part2.data
-Saving snapshot to time40000
-Writing data/time40000.d
-time = 41.001, Etot = -80.3536, T = 124.605
-Writing part2.data
-Saving snapshot to time41000
-Writing data/time41000.d
-time = 42.001, Etot = -80.3339, T = 144.342
-Writing part2.data
-Saving snapshot to time42000
-Writing data/time42000.d
-time = 43.001, Etot = -80.3279, T = 135.983
-Writing part2.data
-Saving snapshot to time43000
-Writing data/time43000.d
-time = 44.001, Etot = -80.3628, T = 137.413
-Writing part2.data
-Saving snapshot to time44000
-Writing data/time44000.d
-time = 45.001, Etot = -80.3379, T = 141.487
-Writing part2.data
-Saving snapshot to time45000
-Writing data/time45000.d
-time = 46.001, Etot = -80.344, T = 140.731
-Writing part2.data
-Saving snapshot to time46000
-Writing data/time46000.d
-time = 47.001, Etot = -80.3202, T = 128.373
-Writing part2.data
-Saving snapshot to time47000
-Writing data/time47000.d
-time = 48.001, Etot = -80.3053, T = 130.67
-Writing part2.data
-Saving snapshot to time48000
-Writing data/time48000.d
-time = 49.001, Etot = -80.2694, T = 127.274
-Writing part2.data
-Saving snapshot to time49000
-Writing data/time49000.d
-time = 50.001, Etot = -80.2686, T = 133.389
-Writing part2.data
-Saving snapshot to time50000
-Writing data/time50000.d
-time = 51.001, Etot = -80.3027, T = 152.34
-Writing part2.data
-Saving snapshot to time51000
-Writing data/time51000.d
-time = 52.001, Etot = -80.3046, T = 143.562
-Writing part2.data
-Saving snapshot to time52000
-Writing data/time52000.d
-time = 53.001, Etot = -80.3069, T = 126.399
-Writing part2.data
-Saving snapshot to time53000
-Writing data/time53000.d
-time = 54.001, Etot = -80.308, T = 138.947
-Writing part2.data
-Saving snapshot to time54000
-Writing data/time54000.d
-time = 55.001, Etot = -80.3594, T = 146.083
-Writing part2.data
-Saving snapshot to time55000
-Writing data/time55000.d
-time = 56.001, Etot = -80.3576, T = 142.023
-Writing part2.data
-Saving snapshot to time56000
-Writing data/time56000.d
-time = 57.001, Etot = -80.3348, T = 136.275
-Writing part2.data
-Saving snapshot to time57000
-Writing data/time57000.d
-time = 58.001, Etot = -80.3664, T = 143.077
-Writing part2.data
-Saving snapshot to time58000
-Writing data/time58000.d
-time = 59.001, Etot = -80.3805, T = 149.49
-Writing part2.data
-Saving snapshot to time59000
-Writing data/time59000.d
-time = 60.001, Etot = -80.4145, T = 137.35
-Writing part2.data
-Saving snapshot to time60000
-Writing data/time60000.d
-time = 61.001, Etot = -80.4582, T = 151.536
-Writing part2.data
-Saving snapshot to time61000
-Writing data/time61000.d
-time = 62.001, Etot = -80.4872, T = 134.662
-Writing part2.data
-Saving snapshot to time62000
-Writing data/time62000.d
-time = 63.001, Etot = -80.4837, T = 143.639
-Writing part2.data
-Saving snapshot to time63000
-Writing data/time63000.d
-time = 64.001, Etot = -80.4596, T = 143.943
-Writing part2.data
-Saving snapshot to time64000
-Writing data/time64000.d
-time = 65.001, Etot = -80.438, T = 128.827
-Writing part2.data
-Saving snapshot to time65000
-Writing data/time65000.d
-time = 66.001, Etot = -80.4146, T = 139.958
-Writing part2.data
-Saving snapshot to time66000
-Writing data/time66000.d
-time = 67.001, Etot = -80.4433, T = 146.047
-Writing part2.data
-Saving snapshot to time67000
-Writing data/time67000.d
-time = 68.001, Etot = -80.4153, T = 139.484
-Writing part2.data
-Saving snapshot to time68000
-Writing data/time68000.d
-time = 69.001, Etot = -80.4415, T = 131.296
-Writing part2.data
-Saving snapshot to time69000
-Writing data/time69000.d
-time = 70.001, Etot = -80.4026, T = 139.578
-Writing part2.data
-Saving snapshot to time70000
-Writing data/time70000.d
-time = 71.001, Etot = -80.395, T = 134.133
-Writing part2.data
-Saving snapshot to time71000
-Writing data/time71000.d
-time = 72.001, Etot = -80.3989, T = 129.797
-Writing part2.data
-Saving snapshot to time72000
-Writing data/time72000.d
-time = 73.001, Etot = -80.4007, T = 135.298
-Writing part2.data
-Saving snapshot to time73000
-Writing data/time73000.d
-time = 74.001, Etot = -80.3905, T = 130.08
-Writing part2.data
-Saving snapshot to time74000
-Writing data/time74000.d
-time = 75.001, Etot = -80.4104, T = 136.028
-Writing part2.data
-Saving snapshot to time75000
-Writing data/time75000.d
-time = 76.001, Etot = -80.4626, T = 151.2
-Writing part2.data
-Saving snapshot to time76000
-Writing data/time76000.d
-time = 77.001, Etot = -80.4634, T = 137.5
-Writing part2.data
-Saving snapshot to time77001
-Writing data/time77001.d
-time = 78.001, Etot = -80.5046, T = 142.154
-Writing part2.data
-Saving snapshot to time78001
-Writing data/time78001.d
-time = 79.001, Etot = -80.4989, T = 137.242
-Writing part2.data
-Saving snapshot to time79001
-Writing data/time79001.d
-time = 80.001, Etot = -80.5104, T = 143.575
-Writing part2.data
-Saving snapshot to time80001
-Writing data/time80001.d
-time = 81.001, Etot = -80.4983, T = 142.642
-Writing part2.data
-Saving snapshot to time81001
-Writing data/time81001.d
-time = 82.001, Etot = -80.4525, T = 138.601
-Writing part2.data
-Saving snapshot to time82001
-Writing data/time82001.d
-time = 83.001, Etot = -80.4131, T = 129.902
-Writing part2.data
-Saving snapshot to time83001
-Writing data/time83001.d
-time = 84.001, Etot = -80.4085, T = 131.578
-Writing part2.data
-Saving snapshot to time84001
-Writing data/time84001.d
-time = 85.001, Etot = -80.3563, T = 138.956
-Writing part2.data
-Saving snapshot to time85001
-Writing data/time85001.d
-time = 86.001, Etot = -80.3513, T = 132.534
-Writing part2.data
-Saving snapshot to time86001
-Writing data/time86001.d
-time = 87.001, Etot = -80.3721, T = 130.411
-Writing part2.data
-Saving snapshot to time87001
-Writing data/time87001.d
-time = 88.001, Etot = -80.3952, T = 141.263
-Writing part2.data
-Saving snapshot to time88001
-Writing data/time88001.d
-time = 89.001, Etot = -80.4079, T = 145.251
-Writing part2.data
-Saving snapshot to time89001
-Writing data/time89001.d
-time = 90.001, Etot = -80.4129, T = 136.491
-Writing part2.data
-Saving snapshot to time90001
-Writing data/time90001.d
-time = 91.001, Etot = -80.4119, T = 139.989
-Writing part2.data
-Saving snapshot to time91001
-Writing data/time91001.d
-time = 92.001, Etot = -80.3692, T = 130.54
-Writing part2.data
-Saving snapshot to time92001
-Writing data/time92001.d
-time = 93.001, Etot = -80.3698, T = 143.534
-Writing part2.data
-Saving snapshot to time93001
-Writing data/time93001.d
-time = 94.001, Etot = -80.3524, T = 130.805
-Writing part2.data
-Saving snapshot to time94001
-Writing data/time94001.d
-time = 95.001, Etot = -80.3507, T = 127.754
-Writing part2.data
-Saving snapshot to time95001
-Writing data/time95001.d
-time = 96.001, Etot = -80.3914, T = 139.545
-Writing part2.data
-Saving snapshot to time96001
-Writing data/time96001.d
-time = 97.001, Etot = -80.389, T = 134.605
-Writing part2.data
-Saving snapshot to time97001
-Writing data/time97001.d
-time = 98.001, Etot = -80.3334, T = 130.866
-Writing part2.data
-Saving snapshot to time98001
-Writing data/time98001.d
-time = 99.001, Etot = -80.2868, T = 133.53
-Writing part2.data
-Saving snapshot to time99001
-Writing data/time99001.d
-time = 100.001, Etot = -80.2708, T = 139.347
+Number steps: 200000
+Saving every: 4000 steps.
+time = 1.00401, Etot = -39.5524, T = 161.677
+Writing part2.data
+Saving snapshot to time1004
+Writing data/time1004.d
+time = 5.00401, Etot = -43.6528, T = 142.211
+time = 9.00401, Etot = -44.8884, T = 139.564
+time = 13.004, Etot = -45.4309, T = 138.547
+time = 17.004, Etot = -45.3098, T = 136.645
+Writing part2.data
+Saving snapshot to time17004
+Writing data/time17004.d
+time = 21.004, Etot = -45.3801, T = 136.546
+time = 25.004, Etot = -45.3656, T = 138.201
+time = 29.004, Etot = -45.462, T = 139.816
+time = 33.004, Etot = -45.378, T = 138.981
+Writing part2.data
+Saving snapshot to time33004
+Writing data/time33004.d
+time = 37.004, Etot = -45.3651, T = 138.888
+time = 41.004, Etot = -45.4422, T = 142.063
+time = 45.004, Etot = -45.3946, T = 139.252
+time = 49.004, Etot = -45.5164, T = 136.374
+Writing part2.data
+Saving snapshot to time49004
+Writing data/time49004.d
+time = 53.004, Etot = -45.4133, T = 139.563
+time = 57.004, Etot = -45.4583, T = 143.223
+time = 61.004, Etot = -45.414, T = 135.04
+time = 65.004, Etot = -45.3839, T = 138.154
+Writing part2.data
+Saving snapshot to time65004
+Writing data/time65004.d
+time = 69.004, Etot = -45.3667, T = 138.923
+time = 73.004, Etot = -45.4971, T = 134.836
+time = 77.004, Etot = -45.4989, T = 138.939
+time = 81.004, Etot = -45.4934, T = 135.73
+Writing part2.data
+Saving snapshot to time81004
+Writing data/time81004.d
+time = 85.004, Etot = -45.4986, T = 136.897
+time = 89.004, Etot = -45.5104, T = 136.283
+time = 93.004, Etot = -45.5853, T = 138.959
+time = 97.004, Etot = -45.6773, T = 136.008
+Writing part2.data
+Saving snapshot to time97004
+Writing data/time97004.d
+time = 101.004, Etot = -45.6063, T = 136.014
+time = 105.004, Etot = -45.5471, T = 137.964
+time = 109.004, Etot = -45.5032, T = 136.461
+time = 113.004, Etot = -45.3022, T = 135.146
 Writing part2.data
 Saving snapshot to time
 Writing data/time.d
-Runtime: 159.027 s
+time = 117.004, Etot = -45.3524, T = 137.111
+time = 121.004, Etot = -45.4008, T = 136.858
+time = 125.004, Etot = -45.4423, T = 142.712
+time = 129.004, Etot = -45.4619, T = 136.843
+Writing part2.data
+Saving snapshot to time
+Writing data/time.d
+time = 133.004, Etot = -45.3529, T = 137.18
+time = 137.004, Etot = -45.5706, T = 139.706
+time = 141.004, Etot = -45.3699, T = 139.186
+time = 145.004, Etot = -45.4321, T = 134.712
+Writing part2.data
+Saving snapshot to time
+Writing data/time.d
+time = 149.004, Etot = -45.5383, T = 138.392
+time = 153.004, Etot = -45.6284, T = 135.966
+time = 157.004, Etot = -45.5723, T = 137.908
+time = 161.004, Etot = -45.4939, T = 135.19
+Writing part2.data
+Saving snapshot to time
+Writing data/time.d
+time = 165.004, Etot = -45.3149, T = 135.18
+time = 169.004, Etot = -45.349, T = 138.839
+time = 173.004, Etot = -45.3603, T = 141.919
+time = 177.004, Etot = -45.4675, T = 135.477
+Writing part2.data
+Saving snapshot to time
+Writing data/time.d
+time = 181.004, Etot = -45.471, T = 139.968
+time = 185.004, Etot = -45.459, T = 137.376
+time = 189.004, Etot = -45.4157, T = 136.226
+time = 193.004, Etot = -45.3844, T = 135.253
+Writing part2.data
+Saving snapshot to time
+Writing data/time.d
+time = 197.004, Etot = -45.409, T = 136.637
+time = 201.004, Etot = -45.3937, T = 136.004
+time = 205.004, Etot = -45.405, T = 136.835
+time = 209.004, Etot = -45.3259, T = 135.497
+Writing part2.data
+Saving snapshot to time
+Writing data/time.d
+time = 213.004, Etot = -45.3292, T = 138.651
+time = 217.004, Etot = -45.4022, T = 137.608
+time = 221.004, Etot = -45.3932, T = 136.681
+time = 225.004, Etot = -45.4296, T = 140.391
+Writing part2.data
+Saving snapshot to time
+Writing data/time.d
+time = 229.004, Etot = -45.3672, T = 135.848
+time = 233.004, Etot = -45.346, T = 141.911
+time = 237.004, Etot = -45.3475, T = 138.322
+time = 241.004, Etot = -45.3472, T = 138.318
+Writing part2.data
+Saving snapshot to time
+Writing data/time.d
+time = 245.004, Etot = -45.402, T = 135.88
+time = 249.004, Etot = -45.1611, T = 139.287
+time = 253.004, Etot = -45.2578, T = 137.763
+time = 257.004, Etot = -45.4066, T = 137.976
+Writing part2.data
+Saving snapshot to time
+Writing data/time.d
+time = 261.004, Etot = -45.4515, T = 139.531
+time = 265.004, Etot = -45.3643, T = 136.657
+time = 269.004, Etot = -45.3781, T = 135.475
+time = 273.004, Etot = -45.3932, T = 137.022
+Writing part2.data
+Saving snapshot to time
+Writing data/time.d
+time = 277.004, Etot = -45.3929, T = 137.412
+time = 281.004, Etot = -45.4636, T = 136.577
+time = 285.004, Etot = -45.5367, T = 135.73
+time = 289.004, Etot = -45.4616, T = 137.685
+Writing part2.data
+Saving snapshot to time
+Writing data/time.d
+time = 293.004, Etot = -45.4658, T = 137.826
+time = 297.004, Etot = -45.3753, T = 138.357
+time = 301.004, Etot = -45.495, T = 137.209
+time = 305.004, Etot = -45.7124, T = 136.849
+Writing part2.data
+Saving snapshot to time
+Writing data/time.d
+time = 309.004, Etot = -45.5718, T = 140.88
+time = 313.004, Etot = -45.6954, T = 137.981
+time = 317.004, Etot = -45.6096, T = 135.942
+time = 321.004, Etot = -45.545, T = 138.108
+Writing part2.data
+Saving snapshot to time
+Writing data/time.d
+time = 325.004, Etot = -45.5197, T = 133.883
+time = 329.004, Etot = -45.4845, T = 137.566
+time = 333.004, Etot = -45.4131, T = 137.024
+time = 337.004, Etot = -45.3763, T = 136.534
+Writing part2.data
+Saving snapshot to time
+Writing data/time.d
+time = 341.004, Etot = -45.5344, T = 137.683
+time = 345.004, Etot = -45.3321, T = 134.772
+time = 349.004, Etot = -45.3634, T = 135.073
+time = 353.004, Etot = -45.3797, T = 133.923
+Writing part2.data
+Saving snapshot to time
+Writing data/time.d
+time = 357.004, Etot = -45.4492, T = 139.019
+time = 361.004, Etot = -45.3086, T = 135.805
+time = 365.004, Etot = -45.3798, T = 133.598
+time = 369.004, Etot = -45.4406, T = 141.4
+Writing part2.data
+Saving snapshot to time
+Writing data/time.d
+time = 373.004, Etot = -45.493, T = 136.914
+time = 377.004, Etot = -45.452, T = 136.622
+time = 381.004, Etot = -45.5118, T = 134.98
+time = 385.004, Etot = -45.5116, T = 135.991
+Writing part2.data
+Saving snapshot to time
+Writing data/time.d
+time = 389.004, Etot = -45.4213, T = 139.891
+time = 393.004, Etot = -45.3874, T = 138.845
+time = 397.004, Etot = -45.4358, T = 138.782
+time = 401.004, Etot = -45.4844, T = 137.863
+Writing part2.data
+Saving snapshot to time
+Writing data/time.d
+time = 405.004, Etot = -45.5167, T = 139.615
+time = 409.004, Etot = -45.489, T = 136.347
+time = 413.004, Etot = -45.4514, T = 136.682
+time = 417.004, Etot = -45.5886, T = 140.379
+Writing part2.data
+Saving snapshot to time
+Writing data/time.d
+time = 421.004, Etot = -45.4039, T = 136.001
+time = 425.004, Etot = -45.4384, T = 141.611
+time = 429.004, Etot = -45.497, T = 138.731
+time = 433.004, Etot = -45.4286, T = 139.835
+Writing part2.data
+Saving snapshot to time
+Writing data/time.d
+time = 437.004, Etot = -45.4532, T = 137.223
+time = 441.004, Etot = -45.5918, T = 135.192
+time = 445.004, Etot = -45.4963, T = 137.967
+time = 449.004, Etot = -45.3858, T = 137.596
+Writing part2.data
+Saving snapshot to time
+Writing data/time.d
+time = 453.004, Etot = -45.4275, T = 138.188
+time = 457.004, Etot = -45.3884, T = 138.693
+time = 461.004, Etot = -45.4545, T = 137.813
+time = 465.004, Etot = -45.4643, T = 138.75
+Writing part2.data
+Saving snapshot to time
+Writing data/time.d
+time = 469.004, Etot = -45.5483, T = 139.114
+time = 473.004, Etot = -45.5034, T = 138.922
+time = 477.004, Etot = -45.5771, T = 140.433
+time = 481.004, Etot = -45.5255, T = 135.783
+Writing part2.data
+Saving snapshot to time
+Writing data/time.d
+time = 485.004, Etot = -45.4443, T = 137.829
+time = 489.004, Etot = -45.3771, T = 138.955
+time = 493.004, Etot = -45.3553, T = 139.237
+time = 497.004, Etot = -45.3364, T = 140.053
+Writing part2.data
+Saving snapshot to time
+Writing data/time.d
+time = 501.004, Etot = -45.4641, T = 141.715
+time = 505.004, Etot = -45.4938, T = 142.573
+time = 509.004, Etot = -45.4961, T = 139.372
+time = 513.004, Etot = -45.4517, T = 135.836
+Writing part2.data
+Saving snapshot to time
+Writing data/time.d
+time = 517.004, Etot = -45.4044, T = 140.741
+time = 521.004, Etot = -45.2467, T = 138.112
+time = 525.004, Etot = -45.3874, T = 139.923
+time = 529.004, Etot = -45.4496, T = 140.012
+Writing part2.data
+Saving snapshot to time
+Writing data/time.d
+time = 533.004, Etot = -45.3446, T = 135.409
+time = 537.004, Etot = -45.2965, T = 137.084
+time = 541.004, Etot = -45.3995, T = 138.582
+time = 545.004, Etot = -45.3165, T = 138.453
+Writing part2.data
+Saving snapshot to time
+Writing data/time.d
+time = 549.004, Etot = -45.4065, T = 138.051
+time = 553.004, Etot = -45.4681, T = 136.982
+time = 557.004, Etot = -45.4583, T = 139.582
+time = 561.004, Etot = -45.6194, T = 140.943
+Writing part2.data
+Saving snapshot to time
+Writing data/time.d
+time = 565.004, Etot = -45.5407, T = 137.536
+time = 569.004, Etot = -45.4622, T = 139.032
+time = 573.004, Etot = -45.5259, T = 137.641
+time = 577.004, Etot = -45.3611, T = 137.138
+Writing part2.data
+Saving snapshot to time
+Writing data/time.d
+time = 581.004, Etot = -45.4174, T = 138.293
+time = 585.004, Etot = -45.3579, T = 139.761
+time = 589.004, Etot = -45.4504, T = 136.255
+time = 593.004, Etot = -45.3179, T = 137.012
+Writing part2.data
+Saving snapshot to time
+Writing data/time.d
+time = 597.004, Etot = -45.5127, T = 141.802
+time = 601.004, Etot = -45.5449, T = 136.538
+time = 605.004, Etot = -45.4742, T = 138.909
+time = 609.004, Etot = -45.5012, T = 137.667
+Writing part2.data
+Saving snapshot to time
+Writing data/time.d
+time = 613.004, Etot = -45.4295, T = 138.076
+time = 617.004, Etot = -45.3508, T = 140.504
+time = 621.004, Etot = -45.3362, T = 134.748
+time = 625.004, Etot = -45.3613, T = 137.654
+Writing part2.data
+Saving snapshot to time
+Writing data/time.d
+time = 629.004, Etot = -45.4393, T = 140.321
+time = 633.004, Etot = -45.3882, T = 133.05
+time = 637.004, Etot = -45.4159, T = 139.676
+time = 641.004, Etot = -45.5038, T = 137.182
+Writing part2.data
+Saving snapshot to time
+Writing data/time.d
+time = 645.004, Etot = -45.4446, T = 139.073
+time = 649.004, Etot = -45.4871, T = 137.561
+time = 653.004, Etot = -45.5074, T = 135.031
+time = 657.004, Etot = -45.4791, T = 136.296
+Writing part2.data
+Saving snapshot to time
+Writing data/time.d
+time = 661.004, Etot = -45.5176, T = 138.449
+time = 665.004, Etot = -45.4529, T = 141.259
+time = 669.004, Etot = -45.3624, T = 140.178
+time = 673.004, Etot = -45.513, T = 138.062
+Writing part2.data
+Saving snapshot to time
+Writing data/time.d
+time = 677.004, Etot = -45.4582, T = 138.138
+time = 681.004, Etot = -45.5531, T = 139.955
+time = 685.004, Etot = -45.4945, T = 140.74
+time = 689.004, Etot = -45.3959, T = 140.677
+Writing part2.data
+Saving snapshot to time
+Writing data/time.d
+time = 693.004, Etot = -45.4623, T = 136.975
+time = 697.004, Etot = -45.3056, T = 139.831
+time = 701.004, Etot = -45.4018, T = 136.683
+time = 705.004, Etot = -45.3592, T = 138.566
+Writing part2.data
+Saving snapshot to time
+Writing data/time.d
+time = 709.004, Etot = -45.262, T = 137.171
+time = 713.004, Etot = -45.4117, T = 133.562
+time = 717.004, Etot = -45.4322, T = 135.577
+time = 721.004, Etot = -45.3695, T = 136.95
+Writing part2.data
+Saving snapshot to time
+Writing data/time.d
+time = 725.004, Etot = -45.4534, T = 137.191
+time = 729.004, Etot = -45.3451, T = 139.89
+time = 733.004, Etot = -45.4029, T = 142.593
+time = 737.004, Etot = -45.4224, T = 138.493
+Writing part2.data
+Saving snapshot to time
+Writing data/time.d
+time = 741.004, Etot = -45.3624, T = 137.394
+time = 745.004, Etot = -45.5934, T = 137.467
+time = 749.004, Etot = -45.4937, T = 138.983
+time = 753.004, Etot = -45.4492, T = 141.317
+Writing part2.data
+Saving snapshot to time
+Writing data/time.d
+time = 757.004, Etot = -45.4472, T = 135.118
+time = 761.004, Etot = -45.4234, T = 140.343
+time = 765.004, Etot = -45.469, T = 136.942
+time = 769.004, Etot = -45.486, T = 138.382
+Writing part2.data
+Saving snapshot to time
+Writing data/time.d
+time = 773.004, Etot = -45.4763, T = 139.039
+time = 777.004, Etot = -45.5296, T = 139.972
+time = 781.004, Etot = -45.4009, T = 138.929
+time = 785.004, Etot = -45.4507, T = 139.43
+Writing part2.data
+Saving snapshot to time
+Writing data/time.d
+time = 789.004, Etot = -45.3391, T = 138.377
+time = 793.004, Etot = -45.5045, T = 138.298
+time = 797.004, Etot = -45.5473, T = 138.686
+time = 801.004, Etot = -45.4119, T = 134.59
+Writing part2.data
+Saving snapshot to time
+Writing data/time.d
+Runtime: 384.034 s
