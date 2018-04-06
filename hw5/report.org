@@ -105,39 +105,6 @@ file:figures/q2-msd.png
 file:figures/q3-combined.png
 
 * Question 4
-
-Perform simulation study of self-diffusion for a system shown
-schematically at the bottom of the this page (using the crystal
-generator create an input file that has 4×4×20 FCC unit cells (1280
-atoms) and lattice constant afcc is 5.78 Å. (continued at the next
-page)
-
-Use variable KHIST(I) to define rigid atoms (KHIST(I)=3), atoms of
- type A (KHIST(I)=0), and atoms of type B (KHIST(I)=1).
- All atoms are interacting among each other via the same interatomic
- potential (KTYPE(I)=1 for all atoms).
- You can think about atoms of type B as isotopes of atoms of type A.
- Thus, in this simulation you will study self-diffusion of Ar.
-
-Choose parameters in md.input so that you have periodic boundary
-conditions in X and Y directions, and rigid boundaries in Z direction.
-In this simulation use the same temperatures as you used in task
-#1.
-
-Use your knowledge of D (from task #2) to estimate the time of the
-simulation that would give you a significant mixing of atoms A and B.
-
-Explain your choice of the total time of the simulation.
- Also, use your knowledge of D to estimate an appropriate value for
- input parameter Ngather (that defines how often you have to gather
- atoms to the original computational cell).
- Explain your choice of Ngather.
-
-Plot snapshots of your system (mark atoms A and B in a different way)
-and concentration profiles for atoms of type B for three different
-times during the simulation.
-------
-
 Similar to previous simulations, the assembled crystal was first
 equilibrated by simulation for 1 ps with equal velocity distribution
 is constant pressure (KFLAG = 2, LFLAG = 1) at T = 138 K. Since the
@@ -147,7 +114,7 @@ arbitrarily set.
 #+NAME: fig:q4-equil
 file:figures/q4-equil.png
 
-After equilibration, the system was simulation with constant
+After equilibration, the system was simulated with constant
 temperature and constant volume (KFLAG = 5, LFLAG = 0) at T = 138 K
 for 800 ps with dt = 0.004 ps. If we consider "significant mixing" to
 be the diffusion of atoms 15 Angstrom into each other, then we can
@@ -169,6 +136,9 @@ distance:
 \frac{1}{D} \Bigg[\frac{ps}{A^2}\Bigg] \times \frac{1}{dt} \Bigg[\frac{steps}{ps}\Bigg] \times \Bigg(\frac{x_{len}}{2}\Bigg)^2 [A^2] = 35650 [steps-per-gather]
 \end{equation}
 
+#+CAPTION:
+#+NAME: fig:q4-rprepost
+[[file:figures/q4-rprepost.png]]
 
 
 * References

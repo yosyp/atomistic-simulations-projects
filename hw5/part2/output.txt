@@ -5,7 +5,7 @@ Building LJ Ar-Ar potential
 sigma = 3.405, epsilon = 0.0103
 Reading equilpart2.data
 Starting the simulation
-Number steps: 200000
+Number steps: 240250
 Saving every: 4000 steps.
 time = 1.00401, Etot = -39.5524, T = 161.677
 Writing part2.data
@@ -361,4 +361,74 @@ time = 801.004, Etot = -45.4119, T = 134.59
 Writing part2.data
 Saving snapshot to time801
 Writing data/time801.d
-Runtime: 410.337 s
+time = 805.004, Etot = -45.4568, T = 136.588
+time = 809.004, Etot = -45.4162, T = 136.477
+time = 813.004, Etot = -45.3589, T = 139.591
+time = 817.004, Etot = -45.3514, T = 138.273
+Writing part2.data
+Saving snapshot to time817
+Writing data/time817.d
+time = 821.004, Etot = -45.4326, T = 138.028
+time = 825.004, Etot = -45.3382, T = 137.912
+time = 829.004, Etot = -45.4837, T = 140.134
+time = 833.004, Etot = -45.4497, T = 137.687
+Writing part2.data
+Saving snapshot to time833
+Writing data/time833.d
+time = 837.004, Etot = -45.5494, T = 136.532
+time = 841.004, Etot = -45.4454, T = 137.546
+time = 845.004, Etot = -45.3423, T = 137.514
+time = 849.004, Etot = -45.507, T = 137.429
+Writing part2.data
+Saving snapshot to time849
+Writing data/time849.d
+time = 853.004, Etot = -45.4489, T = 139.5
+time = 857.004, Etot = -45.364, T = 135.586
+time = 861.004, Etot = -45.483, T = 140.299
+time = 865.004, Etot = -45.4089, T = 141.667
+Writing part2.data
+Saving snapshot to time865
+Writing data/time865.d
+time = 869.004, Etot = -45.4219, T = 135.759
+time = 873.004, Etot = -45.3943, T = 138.368
+time = 877.004, Etot = -45.4428, T = 135.621
+time = 881.004, Etot = -45.4917, T = 140.087
+Writing part2.data
+Saving snapshot to time881
+Writing data/time881.d
+time = 885.004, Etot = -45.5332, T = 140.166
+time = 889.004, Etot = -45.4685, T = 135.939
+time = 893.004, Etot = -45.4413, T = 141.131
+time = 897.004, Etot = -45.4127, T = 136.368
+Writing part2.data
+Saving snapshot to time897
+Writing data/time897.d
+time = 901.004, Etot = -45.4221, T = 136.892
+time = 905.004, Etot = -45.4067, T = 140.033
+time = 909.004, Etot = -45.2958, T = 136.191
+time = 913.004, Etot = -45.4876, T = 139.311
+Writing part2.data
+Saving snapshot to time913
+Writing data/time913.d
+time = 917.004, Etot = -45.4219, T = 137.563
+time = 921.004, Etot = -45.4181, T = 136.57
+time = 925.004, Etot = -45.4771, T = 138.175
+time = 929.004, Etot = -45.3773, T = 135.997
+Writing part2.data
+Saving snapshot to time929
+Writing data/time929.d
+time = 933.004, Etot = -45.3455, T = 136.073
+time = 937.004, Etot = -45.3796, T = 136.046
+time = 941.004, Etot = -45.5629, T = 134.982
+time = 945.004, Etot = -45.3958, T = 137.718
+Writing part2.data
+Saving snapshot to time945
+Writing data/time945.d
+time = 949.004, Etot = -45.3207, T = 142.635
+time = 953.004, Etot = -45.3802, T = 133.525
+time = 957.004, Etot = -45.4466, T = 135.873
+time = 961.004, Etot = -45.4696, T = 141.47
+Writing part2.data
+Saving snapshot to time961
+Writing data/time961.d
+Runtime: 506.8 s
