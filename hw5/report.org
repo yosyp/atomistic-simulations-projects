@@ -106,8 +106,8 @@ file:figures/q3-combined.png
 
 * Question 4
 Similar to previous simulations, the assembled crystal was first
-equilibrated by simulation for 1 ps with equal velocity distribution
-is constant pressure (KFLAG = 2, LFLAG = 1) at T = 138 K. Since the
+equilibrated by simulating t=1 ps with equal velocity distribution
+and constant pressure (KFLAG = 2, LFLAG = 1) at T = 138 K. Since the
 total simulation time is only 1 ps, the value of Ngather was
 arbitrarily set.
 #+CAPTION: Equilibration of the 4x4x20 FCC crystal (1280 atoms) with $a_{fcc} = 5.78$ Angstrom. Rigid atoms are on the top and bottom with a corresponding rigid boundary condition in the z direction. The inner two types of atoms correspond to Ar and an isotope of Ar, with corresponding periodic boundary conditions in the X and Y direction. The axis of the figure is such that the z-axis is north (up). 
@@ -116,13 +116,16 @@ file:figures/q4-equil.png
 
 After equilibration, the system was simulated with constant
 temperature and constant volume (KFLAG = 5, LFLAG = 0) at T = 138 K
-for 800 ps with dt = 0.004 ps. If we consider "significant mixing" to
+for 961 ps with dt = 0.004 ps. If we consider "significant mixing" to
 be the diffusion of atoms 15 Angstrom into each other, then we can
 predict the simulation time using knowledge of the diffusion
 coefficient as:
 \begin{equation}
 \frac{(2 \times 15 \quad [Angstrom])^2 }{D \quad [Angstrom^2/ps]} = \frac{900 \quad [Angstrom^2]}{0.9371 \quad [A^2/ps]} = \frac{961 \quad [ps]}{0.004 \quad [steps/ps]} = 240250 \quad [steps]
 \end{equation}
+The predicted number of steps multiplied by the timestep of
+integration yields the total simulation time required to achieve
+diffusion of 15 Angstrom depth.
 
 Since the Ngather parameter gathers molecules back to the computation
 cell, it is reasonable to perform a gather step when atoms are
@@ -136,27 +139,87 @@ distance:
 \frac{1}{D} \Bigg[\frac{ps}{A^2}\Bigg] \times \frac{1}{dt} \Bigg[\frac{steps}{ps}\Bigg] \times \Bigg(\frac{x_{len}}{2}\Bigg)^2 [A^2] = 35650 [steps-per-gather]
 \end{equation}
 
-#+CAPTION:
+#+CAPTION: Top snapshot is at t = 0 ps, bottom snapshot is at t = 961 ps. As predicted, the Ar atoms self diffused across the artificial barrier up to 15 Angstrom on average. The atomic snapshot only shows the lateral surface of the simulation box, so a different analysis technique is necessary to determine mixing to a more accurate degree. 
 #+NAME: fig:q4-rprepost
 [[file:figures/q4-rprepost.png]]
+
+#+CAPTION: The concentration profile along the z-axis (horizontal in the figure above) is plotted where the atoms in each x-y plane with 2.6 Angstrom thickness are binned into a single data point. The initial concentration profile is showed atoms of type-A and type-B completely separated. The plot above shows significant self-diffusion of Argon, with an equal concentration of type-A and type-B atoms in the middle of the system (Z = 60 A), and roughly linearly increasing/decreasing further from the symmetric center of the system. 
+#+NAME: fig:q4-conc
+[[file:figures/q4-conc.png]]
+
+* Question 5
+A finite difference (FD) method (1D FTCS) was used (Matlab code below) to calculate the time
+evolution of the concentration profile from a continuum scale by
+simulating the diffusion equation. The general trend of diffusion is
+similar in both the FD and MD solutions, where the z-coordinate
+symmetrical center of the system has equal concentrations of both
+type-A and type-B atoms. However, given the small size and discrete
+nature of atoms in the MD simulation, the concentration profile
+reconstructed from atomic positions appears more linear than the
+continuum-level simulation. 
+
+More specifically, the FD reconstruction shows the atomic
+concentrations plateauing to a non-zero value (~7 atoms), whereas the
+concentration profile obtained from MD simulations has atomic
+concentration reaching 0. This is expected given the discrete nature
+of such a small system, where no atoms were present at the extreme
+ends of the simulation box (for the given simulation time and diffusion
+coefficient). Over all concentration profiles obtained both
+in the continuum and MD simulations are in good agreement with similar
+trends. However, the continuum-level model is not applicable to the
+nanoscale because it does not correctly reproduce the complete absence
+of atoms in the extreme ends of the simulations box (where no type-A
+atoms were found in the type-B side, and vice versa). Such a
+discrepancy will have important consequences for other physical
+and transport properties calculated from the MD system. 
+
+#+CAPTION: A one-dimensional forward-in-time centered-in-space (FTCS) finite difference method is u used to calculated a continuum-level evolution of the concentration profile by solving the diffusion equation. The same parameters were used as in the MD simulation.
+#+NAME: fig:q5-ftcs
+[[file:figures/q5-ftcs.png]]
+
+\begin{lstlisting}[language=Matlab]
+D = .9371;        % diffusion constant
+L =  115.6;       % system size
+dx = 1.25;        % step of spatial discretization
+h = 0.5;          % timestep
+max_t = 961;      % total simulation time
+x = [0:dx:L];     % x vector
+
+N = ceil(L / dx);       % Number of nodes
+beta = (h*D/(dx^2));    % Constant used in main loop
+
+if (2*D*h/(dx^2)) > .99
+    disp('Von Neumann stability condition not met!');
+end
+
+% Initial concentration profile
+typeAlen = floor(length(x)/2);              % half-length of z-coord
+Ca(1,:) = zeros(1,length(x));               % type A atoms initial
+Ca(1,1:typeAlen+1) = 38*ones(1,typeAlen+1); % type A atoms initial
+
+Cb(1,:) = zeros(1,length(x));                       % type B atoms initial
+Cb(1,typeAlen:length(x)-1) = 38*ones(1,typeAlen+1); % type B atoms initial
+
+% Loop over time
+step = 2;
+for t = 0:h:max_t
+    for i = 2:N-1
+        Ca(step,i) = Ca(step-1,i) + ...
+                    beta*(Ca(step-1,i+1) - 2*Ca(step-1,i) + Ca(step-1,i-1));
+        Cb(step,i) = Cb(step-1,i) + ...
+                    beta*(Cb(step-1,i+1) - 2*Cb(step-1,i) + Cb(step-1,i-1));        
+    end
+    Ca(step,1) = Ca(step-1,1) + 2*beta*(Ca(step-1,2) - Ca(step-1,1));
+    Cb(step,1) = Cb(step-1,1) + 2*beta*(Cb(step-1,2) - Cb(step-1,1));
+    Ca(step,N) = Ca(step-1,N) - 2*beta*(Ca(step-1,N) - Ca(step-1,N-1));
+    Cb(step,N) = Cb(step-1,N) - 2*beta*(Cb(step-1,N) - Cb(step-1,N-1));
+    step = step+1;
+end
+\end{lstlisting}
+
 
 
 * References
 1. The argon melting curve to very high pressures. C-S. Zha, R. Boehler, D. A. Young, M. Ross. The Journal of Chemical Physics 85, 1034 (1986)
 
 2. Extended and accurate determination of the melting curves of argon, helium ice (H_{2}O), and hydrogen (H_2). F. Datchu, P. Laubeyre, R. LeToullec. Physical Review B 61, 6535 (2000)
-f
-
- 
-% Literature source for Argon
-% at T = 84 K, 1.53 10e-5 cm^2/sec 
-% https://aip.scitation.org/doi/abs/10.1063/1.1700899
-%
-% at T = 295 K and 42 kPa, 0.423 cm^2/sec
-% https://journals.aps.org/pr/pdf/10.1103/PhysRev.72.1256
-
-% at T = K and 87 kPa, 2.07 10e-5 cm^2/sec
-
-% Unit conversion:
-% 1 Angstrom^2/ps = 10e-4 cm^2/sec = 10e-8 m^2/s
-
