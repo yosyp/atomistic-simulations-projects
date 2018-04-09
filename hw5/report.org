@@ -15,35 +15,21 @@
 #+DATE: March 22, 2018
 
 * Question 1
-Using the same FCC crystal that you used in homework #4 (7×7×7 unit
- cells), but build it with the lattice parameter afcc = 5.78 Å that is
- based on the experimental molar volume of liquid Ar at the melting
- temperature and 1 atm pressure.
-
- Perform a simulation at constant volume and temperature T = 1.5Tm,
- where Tm is the melting you found in homework #4.
-
- Run the simulations for a time sufficient to collect data for the
- calculation of the diffusion coefficient.
-
-
-
 From HW#4 the melting temperature of Ar at pressure of 1 atm and molar
-volume of 24.6 $\frac{cm^3}{mole}$ was $T_{m} = 92 K$. An FCC crystal with
-7x7x7 unite cells was constructed with lattice parameter $a_{fcc} =
-5.78 A" and simulated at constant volume and temperature $T = 1.5
+volume of 24.6 $\frac{cm^3}{mole}$ was $T_{m} = 92 K$. A FCC crystal with
+7x7x7 unit cells was constructed with lattice parameter $a_{fcc} =
+5.78 A$ and simulated at constant volume and temperature $T = 1.5
 T_{m} = 138 K$. 
 
 #+CAPTION: The FCC crystal was first equilibrated using constant pressure and equal velocity distribution (LFLAG = 1, KFLAG = 2) with periodic boundary conditions at temperature T = 138 K for t = 1 ps. The crystal on the left is the system before equilibration, and after equilibration on the right. Given that the temperature specified is above the melting temperature previously found, it is reasonable that no long range order is found in the system after equilibration and the FCC crystal is not in a solid state. 
 #+NAME: fig:q1-equil
 file:figures/q1-equil.png
 
-#+CAPTION: The FCC crystal after equilibration being heating for t = 100 ps (dt = 0.001 ps) with constant volume and constant temperature (LFLAG = 0, KFLAG = 5) and periodic boundary conditions in all three directions. On the left is the system at t = 0 ps, on the right at t = 100 ps. No qualitative difference is observed between the two system snapshots, and diffusion cannot be estimated since all atoms are of the same type. 
+#+CAPTION: The FCC crystal after equilibration being heated for t = 100 ps (dt = 0.001 ps) with constant volume and constant temperature (LFLAG = 0, KFLAG = 5) and periodic boundary conditions in all three directions. On the left is the system at t = 0 ps, on the right at t = 100 ps. No qualitative difference is observed between the two system snapshots, and diffusion cannot be estimated since all atoms are of the same type. 
 #+NAME: fig:q1-heating100ps
 file:figures/q1-heating100ps.png
 
 * Question 2
-
 The mean squared displacement can be calculated using the average of
 atomic displacements as follows:
 \begin{equation}
@@ -91,7 +77,7 @@ linear regression, the coefficients can be found as:
 
 However, from the in-class lecture on mobility of atoms and diffusion
 (page 1), the Einstein relation is stated to be suitable for estimated D in MD
-simulations only for sufficiently high temperature, when $D > 10^{12}
+simulations only for sufficiently high temperatures, when $D > 10^{12}
 \frac{m^2}{s}$, which seems to be very high and perhaps a typo. 
 
 #+CAPTION: The mean squared displacement vs. time plot as calculated from atomic trajectories compared to their initial positions. A linear fit estimated the diffusion coefficient, D, as the slope of the data. 
@@ -99,7 +85,6 @@ simulations only for sufficiently high temperature, when $D > 10^{12}
 file:figures/q2-msd.png
 
 * Question 3
-
 #+CAPTION: The trajectories of three particles are plotted over time with the color of the line corresponding to time (0 ps to 100 ps, brighter = later time). On the left is the projection of the trajectory to a 2D plane, on the right the same trajectories are plotted in 3D view. From the diffusion coefficient ($D = 0.9371 A^{2}/ps$) it is expected that the 2D projection will show an area close to $0.9371 A^{2}/ps \times 100 ps = 93.71 A^{2}$ or $9.68 A$ in each direction (on average). The trajectories on the left closely resemble this behavior, with atomic displacements on average being close to 10 Angstroms in each direction. 
 #+NAME: fig:q2msd
 file:figures/q3-combined.png
@@ -110,6 +95,7 @@ equilibrated by simulating t=1 ps with equal velocity distribution
 and constant pressure (KFLAG = 2, LFLAG = 1) at T = 138 K. Since the
 total simulation time is only 1 ps, the value of Ngather was
 arbitrarily set.
+
 #+CAPTION: Equilibration of the 4x4x20 FCC crystal (1280 atoms) with $a_{fcc} = 5.78$ Angstrom. Rigid atoms are on the top and bottom with a corresponding rigid boundary condition in the z direction. The inner two types of atoms correspond to Ar and an isotope of Ar, with corresponding periodic boundary conditions in the X and Y direction. The axis of the figure is such that the z-axis is north (up). 
 #+NAME: fig:q4-equil
 file:figures/q4-equil.png
@@ -129,8 +115,8 @@ diffusion of 15 Angstrom depth.
 
 Since the Ngather parameter gathers molecules back to the computation
 cell, it is reasonable to perform a gather step when atoms are
-expected to have traveled half of the simulation cell. With rigid boundaries in the z-direction, only the x
-and y directions will require gathering. Using our new knowledge of
+expected to have traveled half of the simulation cell. With rigid
+boundaries in the z-direction, only the x and y directions will require gathering. Using our new knowledge of
 the diffusion coefficient D = 0.9371 $A^{2}/ps$ and the known size of
 the x-y simulation box ($x_{len} = 23.12$ Angstrom both), we can calculated the
 number of simulation steps required for an atom to travel half the box
@@ -164,7 +150,7 @@ concentration profile obtained from MD simulations has atomic
 concentration reaching 0. This is expected given the discrete nature
 of such a small system, where no atoms were present at the extreme
 ends of the simulation box (for the given simulation time and diffusion
-coefficient). Over all concentration profiles obtained both
+coefficient). Overall concentration profiles obtained both
 in the continuum and MD simulations are in good agreement with similar
 trends. However, the continuum-level model is not applicable to the
 nanoscale because it does not correctly reproduce the complete absence
