@@ -29,14 +29,22 @@ variable ep      equal c_reax[12]
 variable efi     equal c_reax[13]
 variable eqeq    equal c_reax[14]
 
+# Nieghbor list cutoff
+# 2.5 Angstrom (2 is more typical?)
 neighbor        2.5 bin
+
+# Rebuild neighbor list:
+#  delay value = N
+#    N = delay building until this many steps since last build
+#  every value = M
+#    M = build neighbor list every this many steps
+#  check value = yes or no
+#    yes = only build if some atom has moved half the skin distance or more
+#    no = always build on 1st step that every and delay are satisfied
 neigh_modify    every 10 delay 0 check no
 
-thermo          10
-thermo_style    custom step temp epair etotal press &
-                v_eb v_ea v_elp v_emol v_ev v_epen v_ecoa v_ehb &
-                v_et v_eco v_ew v_ep v_efi v_eqeq
-
+# Timestep of iteration [fs]
+# van Duin paper uses 0.25 fs
 timestep        1.0
 
 dump            1 all custom 10 dump.Li1S.lmp id type q xs ys zs
@@ -49,4 +57,6 @@ dump_modify    2 pad 3
 #               axes yes 0.8 0.02 view 60 -30
 #dump_modify    3 pad 3
 
+# Run for # of timesteps (NOT [fs])
+# Example: with 0.25 fs timestep, 1 ns = 4,000,000 timesteps
 run             100

@@ -60,6 +60,7 @@ for j=1:N
             dr = dr + box_size;     % replace displacement
         end
         gt(k,j) = gt(k-1,j) + dr;
+        fprintf('%4.4f\n', dr);
         r_prev = r(k,j);
     end
 end

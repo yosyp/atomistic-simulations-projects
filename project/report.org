@@ -9,24 +9,82 @@
 #+LATEX_HEADER: \usepackage[margin=1.25in]{geometry}
 #+OPTIONS: toc:nil
 
-#+TITLE: FINAL PROJECT TITLE HERE TBD
+#+TITLE: Volumetric expansion of Li_{x}S compounds and discharge voltage profile with larger polysulfides
 #+AUTHOR: MSE 6270: Introduction to Atomistic Simulations @@latex:\\@@ Final Project @@latex:\\\\@@Yosyp Schwab
 #+EMAIL: ys4ea@virginia.edu
 
 * Outline
+_Brief Description_
+Using ReaxFF (bond order) potential study effect of volume expansion
+when introducing varying concentrations of Li into alpha-phase Sulfur
+using NPT simulation (previously published by van Duin) and extend to
+larger polysulfides (Li2Sy where y=1,2,3,4,5,8). Voltage profile
+relative to Li/Li+ can be calculated from ground state energy using
+heuristic optimization such as genetic algorithm for structure and
+phase prediction (GASP). 
+
+** Project Plan
+1. Abstract
+2. Introduction/Motivation
+3. Details on Building Systems (6 Li_{x}S systems) [Avogadro -> Packmol -> VMD -> LAMMPS]
+4. Details on Building Systems (6 Li_{x}S_{y} systems) [Avogadro -> Packmol -> VMD -> LAMMPS]
+5. Heating (annealing) Simulation to get amorphous structure (300K -> 1600K)
+6. Discharge Voltage Profile (GC-MC/MD)
+7. (If time:) Re-run 3-6 with OPLS-All instead of ReaxFF, compare results
+8. Volume Expansion calculation and Comparison with Experiment
+9. Diffusion Coefficient Calculation 
+
+** Questions:
+1. Is using LAMMPS in addition to-/insted of- the MSE627-MD code allowed?
+2. Need to describe potential in report? To what detail?
+3. van Duin uses dT = 0.25 fs, T = 1 ns (4M timesteps). On Rivanna
+   single-node it will take ~18 hours. Ok to do this?
+4. Cannot use GASP+DFT in time to find formation energies, ok to estimate
+   values from figure in published paper? Needed to calculate voltage
+   profile. 
 
 ** Buildling system
 1. Build 1 molecule of \alpha-S_8 (octocyclo...) in Avogardo export as
-   PDB
-   --insert code here--
-2. Build 1 molecule of Li in Avogardo export as PDB
-   --insert code here--
+   PDB:
+#+begin_latex
+\lstset{language=Python,%
+    basicstyle=\small,
+    breaklines=true,%
+    captionpos=b,%
+    morekeywords={matlab2tikz},
+    keywordstyle=\color{blue},%
+    morekeywords=[2]{1}, keywordstyle=[2]{\color{black}},
+    identifierstyle=\color{black},%
+    stringstyle=\color{mylilas},
+    commentstyle=\color{mygreen},%
+    showstringspaces=false,%without this there will be a symbol in the places where there is a space
+    numbers=left,%
+    numberstyle={\tiny \color{black}},% size of the numbers
+    numbersep=9pt, % this defines how far the numbers are from the text
+    emph=[1]{for,end,break},emphstyle=[1]\color{red}, %some words to emphasise
+    %emph=[2]{word1,word2}, emphstyle=[2]{style},    
+}
+#+end_latex
+#+begin_latex
+\lstinputlisting[caption=PDB file for Sulfur ring.]{build_atoms/S8.pdb}
+#+end_latex
+
+2. Build 1 molecule of Li in Avogardo export as PDB:
+#+begin_latex
+\lstinputlisting[caption=PDB file for Lithium atom.]{build_atoms/Li.pdb}
+#+end_latex
+
 3. Use Packmol to mix 2048 atoms of \alpha-S_8 and Li in various
-   ratios Li_{x}S
-   --insert code here--
+   ratios Li_{x}S:
+#+begin_latex
+\lstinputlisting[caption=Packmol input file.]{build_atoms/mix-Li1S.inp}
+#+end_latex
+
 4. Open pdb file with VMD:
- /Applications/VMD\ 1.9.3.app/Contents/vmd/vmd_MACOSXX86 Li1s.Pdb
-5. 
+ - /Applications/VMD\ 1.9.3.app/Contents/vmd/vmd_MACOSXX86 Li1s.Pdb
+ - Command: package require topotools
+ - Command: topo writelammpsdata data.Li1S molecular
+
 |   x | Atoms of S : Atoms of Li ratio | Square Box Size [A] |
 |-----+--------------------------------+---------------------|
 | 0.4 | 2048 S : 820 Li                |               41.32 |
@@ -36,16 +94,22 @@
 | 1.6 | 2048 S : 3222 Li               |               49.66 |
 | 2.0 | 2048 S : 1024 Li               |               52.09 |
 
-** To calculate simulation box size
-- Molar Volume of Sulfur is 15.53 cm^3/mole = 25.78 Angstrom^3/atom
-- Molar Volume of Lithium is 13.02 cm^3/mole = 21.62 Angstrom^3/atom
-1. Cube root of (Molar Volume (in Angstrom^3/atom) * # of atoms (Li,S))
+  - To calculate simulation box size:
+     1. Molar Volume of Sulfur is 15.53 cm^3/mole = 25.78 Angstrom^3/atom
+     2. Molar Volume of Lithium is 13.02 cm^3/mole = 21.62 Angstrom^3/atom
+     3. Cube root of (Molar Volume (in Angstrom^3/atom) * # of atoms (Li,S))
 
 ** Create amorphous structure 
 1. Slowly heat to T = 1600 K using NVT (V = ???)
 see LAMMPS Tdamp in fix nvt doc page
 also Tstart Tstop
+
+#+begin_latex
+\lstinputlisting[caption=Annealing simulation in LAMMPS]{in.Li1S.lmp}
+#+end_latex
+
 2. Quench heated structure to T = 300 K using NPT (P = 1 atm)
+
 
 * Reference values
 Density of a-Si_8 = 2.07 g/cm^3 = 0.086 g/Angstrom^3
@@ -54,13 +118,17 @@ Volume of 1 S_8 = 0.086 Angstorm^3
 Total volume = (2048 Atoms / 8 Atoms/Molecular) * Volume of 1
 Molecular = 22.016
 
+* Changes to van Duin ReaxFF Force Field file
+1. Had to remove off-diagonal parameters between irrelevant atoms
+   (Rivanna compiles with max=20 off-diagonal elements, van Duin has
+   31 in his 11-atom potential. We only need to look at 2 atoms). 
+
 * Notes
-- use $LD_LIBRARY_PATH to find LAMMPS lib dir
-- /sfs/qumulo/qhome/ys4ea/atomistic-simulations-projects/project
-/apps/software/standard/mpi/intel/16.0/openmpi/2.1.1/lammps/2017-08-11:/share/rci_apps/intel/2016.2/openmpi-2.1.1/lib:/share/rci_apps/intel/2016.2/openmpi-2.1.1/lib/openmpi:/share/rci_apps/intel/2016.2/compilers_and_libraries_2016.0.109/linux/compiler/lib/intel64_lin:/share/rci_apps/intel/2016.2/compilers_and_libraries_2016.0.109/linux/mkl/lib/intel64:/share/rci_apps/intel/2016.2/compilers_and_libraries_2016.0.109/linux/compiler/lib/intel64:/share/rci_apps/intel/2016.2/compilers_and_libraries_2016.0.109/linux/ipp/lib/intel64:/share/rci_apps/intel/2016.2/compilers_and_libraries_2016.0.109/linux/tbb/lib/intel64/gcc4.4:/share/rci_apps/intel/2016.2/debugger_2016/libipt/intel64/lib:/share/rci_apps/intel/2016.2/compilers_and_libraries_2016.0.109/linux/daal/lib/intel64_lin:/share/rci_apps/intel/2016.2/compilers_and_libraries_2016.0.109/linux/tbb/lib/intel64_lin/gcc4.4:/opt/slurm/17.02.1b/lib:/share/rci_apps/common/lib64
+- Use $LD_LIBRARY_PATH to find LAMMPS lib dir!
+- *Library path on Rivanna*: /apps/software/standard/mpi/intel/16.0/openmpi/2.1.1/lammps/2017-08-11:/share/rci_apps/intel/2016.2/openmpi-2.1.1/lib:/share/rci_apps/intel/2016.2/openmpi-2.1.1/lib/openmpi:/share/rci_apps/intel/2016.2/compilers_and_libraries_2016.0.109/linux/compiler/lib/intel64_lin:/share/rci_apps/intel/2016.2/compilers_and_libraries_2016.0.109/linux/mkl/lib/intel64:/share/rci_apps/intel/2016.2/compilers_and_libraries_2016.0.109/linux/compiler/lib/intel64:/share/rci_apps/intel/2016.2/compilers_and_libraries_2016.0.109/linux/ipp/lib/intel64:/share/rci_apps/intel/2016.2/compilers_and_libraries_2016.0.109/linux/tbb/lib/intel64/gcc4.4:/share/rci_apps/intel/2016.2/debugger_2016/libipt/intel64/lib:/share/rci_apps/intel/2016.2/compilers_and_libraries_2016.0.109/linux/daal/lib/intel64_lin:/share/rci_apps/intel/2016.2/compilers_and_libraries_2016.0.109/linux/tbb/lib/intel64_lin/gcc4.4:/opt/slurm/17.02.1b/lib:/share/rci_apps/common/lib64
 - export above at $MYTEST
 - find ${MYTEST//:/ } -name reax_inout.F -print -quit
-- had to remove off-diagonal parameters between irrelevant atoms 
-- rearrange data file columns via
-awk '{ print $1 " " $3 " " $2 " " $4 " " $5 " " $6}' test > new_test
+
+- Rearrange Packmol output data file columns via:
+  awk '{ print $1 " " $3 " " $2 " " $4 " " $5 " " $6}' test > new_test
 
