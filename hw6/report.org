@@ -1,0 +1,83 @@
+#+LaTeX_HEADER: \usepackage[parameters]{listings}
+#+LaTeX_HEADER: \usepackage{listings}
+#+LaTeX_HEADER: \usepackage[english]{babel}
+#+LaTeX_HEADER: \usepackage{color} 
+#+LaTeX_HEADER: \usepackage[section]{placeins} 
+#+LaTeX_HEADER: \definecolor{mygreen}{RGB}{28,172,0} 
+#+LaTeX_HEADER: \definecolor{mylilas}{RGB}{170,55,241}
+#+LaTeX_CLASS_OPTIONS: [listings, listings-bw, listings-color, listings-sv]
+#+LATEX_HEADER: \usepackage[margin=1.25in]{geometry}
+#+OPTIONS: toc:nil
+
+#+TITLE: Metropolis Monte Carlo Simulations Using the Ising Model with Binary Alloys and Vacancies
+#+AUTHOR: MSE 6270: Introduction to Atomistic Simulations @@latex:\\@@ Homework #6 @@latex:\\\\@@Yosyp Schwab
+#+EMAIL: ys4ea@virginia.edu
+#+DATE: April 3, 2018
+
+For part 1, four logarithmically spaced temperatures were chosen to find the
+equilibrium structure using the Metropolis Monte Carlo method using
+the Ising model as implemented in mse627-mc.f90. Temperatures including T =
+0.001 K, 100 K, 1000 K, and 10,000 K with interaction energies AA =
+-0.05 eV, BB = -0.05 eV, AB = -0.25 eV were used, with lattice size
+100x100 particles, and 10000000 Monte Carlo iterations. Temperatures
+were chosen to distinguish between different simulations. The
+thermodynamics of a binary solution can be expressed by the Gibbs free
+energy caused by mixing as:
+\begin{equation}
+\Delta G_{mix} = \Delta H_{mix} - T \Delta S_{mix}
+\end{equation}
+It is found that the \Delta H_{mix} < 0 because E_{AB} < 0.5*(E_{AA}+E_{BB}), which leads to an increase in the
+number of A-B bonds and subsequent ordering at low T. At sufficiently
+high T, this trend reverses and the system becomes disordered because
+the entropic contribution T \Delta S_{mix} dominates in the Gibbs free
+energy expression. 
+
+For part 2, a small positive vacancy formation energy is used to study
+the system at varying temperatures. From numerical simulation results
+it is clear that for low temperatures the formation of vacancies is
+low, and increases with temperature. Using the theoretical expression
+for the equilibrium vacancy concentration:
+\begin{equation}
+n_{eq} = N exp \Bigg( - \frac{\epsilon_v^f}{k_b T} \Bigg)
+\end{equation}
+is compared to the qualitative vacancy formation obtained from the
+final system snapshots at varying temperatures and the final energies
+and AB bond formation trends. From this it is clear that the numerical
+results are in good agreement with the theoretical equation. 
+
+#+CAPTION: Question 3: Snapshots of the structural evolution of the system at increasing Monte Carlo iterations show the system converging to an equilibrium solution very quickly (T = 1000 K). From the thermodynamics of binary solutions it is clear that the internal eenrgy is minimized by increasing the number of A-B bonds leading to ordering of the solution, since E_{AB} < 0.5*(E_{AA} + E_{BB}) so that \Delta H_{mix} > 0. 
+#+NAME: fig:q3-quadsteps
+file:figures/q2-quadsteps.png
+
+#+CAPTION: Question 3: Although the internal energy is minimized by ordering in the system, at sufficiently high temperatures the entropy contribution (-TS) to Gibbs free energy becomes more important. Here, at T = 10,000 K the system becomes disordered even thought E_{AB} < 0.5*(E_{AA} + E_{BB}), energy is no longer minimized at sufficiently high temperatures. 
+#+NAME: fig:q3-energy
+file:figures/q2-energy.png
+
+#+CAPTION: Question 3: The number of AB bonds is increased at "lower" temperatures (up to T = 10,000 K) because it is more energetically favorable to form AB bonds (\epsilon = -0.25 eV) vs AA or BB bonds (\epsilon = -0.05 eV). 
+#+NAME: fig:q3-bonds-all
+file:figures/q2-bonds-all.png
+
+#+CAPTION: Question 3: At T = 1 K as the Monte Carlo iterations advance the number of AB bonds increases at the expense of both AA and BB bonds, which both decrease with a slight preference for AA bonds possibly as an artifact of the system size. 
+#+NAME: fig:q3-1kbonds
+file:figures/q3-1kbonds.png
+
+#+CAPTION: Question 3: Snapshots of the final configurations after Monte Carlo iterations of the systems at varying temperatures. Up to T = 1000 K the dominant contribution to the Gibbs free energy is the energy of mixing \Delta H_{mix}, but at a sufficiently high temperature (somewhere between T = 1000 K and T = 10,000 K) the dominant term because the entropic T \Delta S_{mix} term as seen by the switch from ordered equilibrium to a random distribution. 
+#+NAME: fig:q3-quad
+file:figures/q2-quad.png
+
+#+CAPTION: Question 4: Instead of a binary alloy as in the previous problem, a single element with vacancies is studied by shifting the interactions energies such that "atom A" is now a vacancy with AA = 0 eV, AB = 0.05 eV, BB = -0.05. A positive energy for the formation of an atom-vacancy pair is necessary to drive vacancy formations. An artificially low vacancy formation energy is chosen to study this system. Figure shows snapshots of the final configurations after Monte Carlo iterations of the system at varying energies. 
+#+NAME: fig:q4-quad
+file:figures/q4-quad.png
+
+#+CAPTION: Question 4: The number of AB bonds of the vacancy system is plotted at varying temperatures. At T = 1 K and T = 100 K the number of AB bonds remains identical, in agreement with the final system snapshots above. At T = 1000 K more AB bonds are preserves, suggesting that the system is evolving to include vacancies at this temperature. 
+#+NAME: fig:q4-bonds-all
+file:figures/q4-bonds-all.png
+
+#+CAPTION: Question 4: Plot of vacancy system energy at varying temperatures shows that at higher temperatures the system reaches a lower equilibrium energy in agreement with the previous plot of the system snapshots, showing that more vacancies lead to lower total energy. 
+#+NAME: fig:q4-energy-all
+file:figures/q4-energy-all.png
+
+#+CAPTION: Question 4: The equilibrium vacancy concentration relation is plotted at varying temperatures. From this plot combined with the snapshots in Fig.[[fig:q4-quad]] it is clear that a sufficiently high temperature is necessary to observe significant vacancy formation. At T = 100 K we can only expect 1 vacancy for every 10,000 atoms, whereas at T = 1000 K we can expect full saturation of vacancies. The snapshots above are in agreement with this trend. The numerical results are in agreement with the theoretical equation.  
+#+NAME: fig:q4-vacancy
+file:figures/q4-vacancy.png
+
