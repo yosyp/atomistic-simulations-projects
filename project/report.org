@@ -24,6 +24,9 @@
 3. Use Packmol to mix 2048 atoms of \alpha-S_8 and Li in various
    ratios Li_{x}S
    --insert code here--
+4. Open pdb file with VMD:
+ /Applications/VMD\ 1.9.3.app/Contents/vmd/vmd_MACOSXX86 Li1S.pdb
+5. 
 |   x | Atoms of S : Atoms of Li ratio | Square Box Size [A] |
 |-----+--------------------------------+---------------------|
 | 0.4 | 2048 S : 820 Li                |               41.32 |
@@ -40,6 +43,8 @@
 
 ** Create amorphous structure 
 1. Slowly heat to T = 1600 K using NVT (V = ???)
+see LAMMPS Tdamp in fix nvt doc page
+also Tstart Tstop
 2. Quench heated structure to T = 300 K using NPT (P = 1 atm)
 
 * Reference values
