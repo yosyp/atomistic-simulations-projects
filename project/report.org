@@ -1,0 +1,50 @@
+#+LaTeX_HEADER: \usepackage[parameters]{listings}
+#+LaTeX_HEADER: \usepackage{listings}
+#+LaTeX_HEADER: \usepackage[english]{babel}
+#+LaTeX_HEADER: \usepackage{color} 
+#+LaTeX_HEADER: \usepackage[section]{placeins} 
+#+LaTeX_HEADER: \definecolor{mygreen}{RGB}{28,172,0} 
+#+LaTeX_HEADER: \definecolor{mylilas}{RGB}{170,55,241}
+#+LaTeX_CLASS_OPTIONS: [listings, listings-bw, listings-color, listings-sv]
+#+LATEX_HEADER: \usepackage[margin=1.25in]{geometry}
+#+OPTIONS: toc:nil
+
+#+TITLE: FINAL PROJECT TITLE HERE TBD
+#+AUTHOR: MSE 6270: Introduction to Atomistic Simulations @@latex:\\@@ Final Project @@latex:\\\\@@Yosyp Schwab
+#+EMAIL: ys4ea@virginia.edu
+
+* Outline
+
+** Buildling system
+1. Build 1 molecule of \alpha-S_8 (octocyclo...) in Avogardo export as
+   PDB
+   --insert code here--
+2. Build 1 molecule of Li in Avogardo export as PDB
+   --insert code here--
+3. Use Packmol to mix 2048 atoms of \alpha-S_8 and Li in various
+   ratios Li_{x}S
+   --insert code here--
+|   x | Atoms of S : Atoms of Li ratio | Square Box Size [A] |
+|-----+--------------------------------+---------------------|
+| 0.4 | 2048 S : 820 Li                |               41.32 |
+| 0.8 | 2048 S : 1611 Li               |               44.42 |
+| 1.0 | 2048 S : 2048 Li               |               45.96 |
+| 1.2 | 2048 S : 2428 Li               |               47.22 |
+| 1.6 | 2048 S : 3222 Li               |               49.66 |
+| 2.0 | 2048 S : 1024 Li               |               52.09 |
+
+** To calculate simulation box size
+- Molar Volume of Sulfur is 15.53 cm^3/mole = 25.78 Angstrom^3/atom
+- Molar Volume of Lithium is 13.02 cm^3/mole = 21.62 Angstrom^3/atom
+1. Cube root of (Molar Volume (in Angstrom^3/atom) * # of atoms (Li,S))
+
+** Create amorphous structure 
+1. Slowly heat to T = 1600 K using NVT (V = ???)
+2. Quench heated structure to T = 300 K using NPT (P = 1 atm)
+
+* Reference values
+Density of a-Si_8 = 2.07 g/cm^3 = 0.086 g/Angstrom^3
+
+Volume of 1 S_8 = 0.086 Angstorm^3
+Total volume = (2048 Atoms / 8 Atoms/Molecular) * Volume of 1
+Molecular = 22.016
