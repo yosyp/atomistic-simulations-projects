@@ -172,4 +172,4 @@ time = 1.00001, Etot = -39.5568, T = 161.65
 Writing equilpart2.data
 Saving snapshot to time1000
 Writing data/time1000.d
-Runtime: 162.56 s
+Runtime: 178.788 s
