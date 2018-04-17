@@ -2,16 +2,15 @@
 
 # Intialization
 units          real
-dimension      3d
 boundary       p p p
 atom_style     charge
-read_data      Li1S.data
+read_data      data.Li1S
 
 # Atom Definition
 #  reax args:
 #             hbcut hbnewflag tripflag precision
 pair_style     reax 6.0 1 1 1.0e-6
-pair_coeff     * * ffield_COHNSLi.dms 1 2 3 4
+pair_coeff     * * ffield.reax 7 4
 
 compute reax all pair reax
 
