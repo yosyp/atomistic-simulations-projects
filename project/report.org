@@ -25,7 +25,7 @@
    ratios Li_{x}S
    --insert code here--
 4. Open pdb file with VMD:
- /Applications/VMD\ 1.9.3.app/Contents/vmd/vmd_MACOSXX86 Li1S.pdb
+ /Applications/VMD\ 1.9.3.app/Contents/vmd/vmd_MACOSXX86 Li1s.Pdb
 5. 
 |   x | Atoms of S : Atoms of Li ratio | Square Box Size [A] |
 |-----+--------------------------------+---------------------|
@@ -53,3 +53,14 @@ Density of a-Si_8 = 2.07 g/cm^3 = 0.086 g/Angstrom^3
 Volume of 1 S_8 = 0.086 Angstorm^3
 Total volume = (2048 Atoms / 8 Atoms/Molecular) * Volume of 1
 Molecular = 22.016
+
+* Notes
+- use $LD_LIBRARY_PATH to find LAMMPS lib dir
+- /sfs/qumulo/qhome/ys4ea/atomistic-simulations-projects/project
+/apps/software/standard/mpi/intel/16.0/openmpi/2.1.1/lammps/2017-08-11:/share/rci_apps/intel/2016.2/openmpi-2.1.1/lib:/share/rci_apps/intel/2016.2/openmpi-2.1.1/lib/openmpi:/share/rci_apps/intel/2016.2/compilers_and_libraries_2016.0.109/linux/compiler/lib/intel64_lin:/share/rci_apps/intel/2016.2/compilers_and_libraries_2016.0.109/linux/mkl/lib/intel64:/share/rci_apps/intel/2016.2/compilers_and_libraries_2016.0.109/linux/compiler/lib/intel64:/share/rci_apps/intel/2016.2/compilers_and_libraries_2016.0.109/linux/ipp/lib/intel64:/share/rci_apps/intel/2016.2/compilers_and_libraries_2016.0.109/linux/tbb/lib/intel64/gcc4.4:/share/rci_apps/intel/2016.2/debugger_2016/libipt/intel64/lib:/share/rci_apps/intel/2016.2/compilers_and_libraries_2016.0.109/linux/daal/lib/intel64_lin:/share/rci_apps/intel/2016.2/compilers_and_libraries_2016.0.109/linux/tbb/lib/intel64_lin/gcc4.4:/opt/slurm/17.02.1b/lib:/share/rci_apps/common/lib64
+- export above at $MYTEST
+- find ${MYTEST//:/ } -name reax_inout.F -print -quit
+- had to remove off-diagonal parameters between irrelevant atoms 
+- rearrange data file columns via
+awk '{ print $1 " " $3 " " $2 " " $4 " " $5 " " $6}' test > new_test
+

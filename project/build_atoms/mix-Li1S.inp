@@ -17,16 +17,16 @@ output Li1S.pdb
 
 # 2048 S molecules and 2048 Li molecules will be put in a box
 # defined by the minimum coordinates x, y and z = 0. 0. 0. and maximum
-# coordinates 45.96 45.96 45.96 That is, they will be put in a cube of side
-# 45.96 (the keyword "inside cube 0. 0. 0. 45.96") could be used as well.
+# coordinates 65.96 65.96 65.96 That is, they will be put in a cube of side
+# 65.96 (the keyword "inside cube 0. 0. 0. 65.96") could be used as well.
 
 structure S8.pdb 
   number 256 
-  inside box 0. 0. 0. 45.96 45.96 45.96 
+  inside box 0. 0. 0. 65.96 65.96 65.96 
 end structure
 
 structure Li.pdb
   number 2048
-  inside box 0. 0. 0. 45.96 45.96 45.96 
+  inside box 0. 0. 0. 65.96 65.96 65.96 
 end structure
 
